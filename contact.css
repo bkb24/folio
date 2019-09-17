@@ -1,0 +1,85 @@
+.home-screen.contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+}
+
+.hero-contact-col {
+    flex: 1;
+    padding: 3rem;
+}
+
+.hero-contact-col h3 {
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.hero-contact-col p {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.hero-contact-area {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.hero-contact-form {
+    width: 75%;
+    background: rgba(255, 255, 255, .8);
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    font-family: 'Open Sans', sans-serif;
+    /* font-size: 1rem; */
+}
+
+.contact-line {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: .75rem;
+}
+
+.contact-line label {
+    width: 100%;
+    margin-bottom: .25rem;
+    font-size: .9rem;
+}
+
+.contact-line input,
+.contact-line textarea {
+    width: 100%;
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    padding: .5rem;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, .1); */
+}
+
+.hero-send {
+    width: 100%;
+    padding: 1rem 2rem;
+    margin: auto;
+
+    border: none;
+
+    color: #fff;
+    text-transform: uppercase;
+
+    font-weight: 600;
+
+    border-radius: 5px;
+    background: rgb(0, 135, 153);
+    background: linear-gradient(110deg, rgb(0, 135, 153) 0%, rgb(218, 50, 139) 100%);
+    /* background: rgb(218, 50, 139); */
+}
+
+.contact-line h5 {
+    font-weight: 500;
+    font-size: .75rem;
+}

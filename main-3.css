@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --nav-skew: 15deg;
+    --nav-skew-neg: -15deg;
+    --nav-translate: 0;
+    --nav-translate-hover: 170px;
+}
+
+header {
+    background: rgba(255, 0, 0, .9);
+}
+
+nav {
+    margin-top: 64px;
+}
+
+ul {
+    width: 300px;
+    list-style: none;
+    position: relative;
+}
+
+li {
+    text-align: right;
+    box-shadow: 0 0 5px #222;
+    transform: skewX(15deg);
+    background: red;
+    transition: all .25s ease-in-out;
+    margin-left: -100%;
+}
+
+li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 30px 20px;
+}
+
+li:nth-child(1) {
+    transform: translateX(var(--nav-translate)) skewX(var(--nav-skew-neg));
+}
+
+li:nth-child(2) {
+    margin-right: 21px;
+}
+
+li:nth-child(3) {
+    margin-right: 42px;
+}
+
+li:nth-child(4) {
+    margin-right: 63px;
+}
+
+li:nth-child(2),
+li:nth-child(3) {
+    transform: translateX(var(--nav-translate)) skewX(var(--nav-skew-neg));
+}
+
+li:nth-child(3),
+li:nth-child(4) {
+    transform: translateX(var(--nav-translate)) skewX(var(--nav-skew-neg));
+}
+
+li:nth-child(1) a,
+li:nth-child(2) a {
+    transform: skewX(var(--nav-skew));
+}
+
+li:nth-child(3) a,
+li:nth-child(4) a {
+    transform: skewX(var(--nav-skew));
+}
+
+li:hover {
+    --nav-translate: var(--nav-translate-hover);
+}
+
+.test {
+    position: absolute;
+    right: 0;
+    top: 80px;
+    width: 200px;
+    margin-left: 50px;
+}
+
+.item {
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+li:hover .item {
+    animation: example2 .1s ease-out;
+}
+
+li:hover .item {
+    transform-origin: top;
+    background: red;
+    padding: 30px;
+    -webkit-transform: perspective(500) rotateX(-90deg);
+    -webkit-transform-origin: 0% 0%;
+    animation-fill-mode: forwards;
+    border-bottom: 1px solid rgba(2, 2, 2, .1);
+    animation-delay: .25s;
+}
+
+li:hover .item:nth-child(2) {
+    animation-delay: .35s;
+}
+
+li:hover .item:nth-child(3) {
+    animation-delay: .45s;
+}
+
+li:hover .item:nth-child(4) {
+    animation-delay: .55s;
+}
+
+@keyframes example2 {
+    from {
+        opacity: 1;
+        -webkit-transform: perspective(500) rotateX(-90deg);
+        -webkit-transform-origin: 0% 0%;
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: perspective(500) rotateX(0deg);
+        -webkit-transform-origin: 0% 0%;
+    }
+}

@@ -1,0 +1,126 @@
+h2 {
+    text-align: center;
+}
+
+section {
+    padding: 0 32px;
+    padding-top: 64px;
+}
+
+section h2 {
+    margin-bottom: 64px;
+}
+
+folio-body {
+    display: flex;
+}
+
+#freelance {
+    background: var(--nav-color);
+    background: #bc0f0f;
+    color: #fff;
+    padding-bottom: 64px;
+    padding-top: 86px;
+    position: relative;
+    overflow: hidden;
+}
+
+#freelance:before {
+    content: '';
+    position: absolute;
+    top: -7vh;
+    left: -2vw;
+    width: 100vw;
+    height: 7vh;
+    transform: translateY(50%) rotate(-2deg);
+    background: #fff;
+}
+
+#freelance:after {
+    content: '';
+    position: absolute;
+    bottom: 0vh;
+    left: 0;
+    width: 100vw;
+    height: 7vh;
+    transform: translateY(50%) rotate(-2deg);
+    background: #fff;
+}
+
+folio-body {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 32px;
+}
+
+img {
+    width: 100%;
+}
+
+article {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    overflow: hidden;
+}
+
+project-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    transform: translateY(70%) rotate(-10deg);
+    transition: all .25s ease-in-out;
+}
+
+project-body h3 {
+    width: 120%;
+    background: #bc0f0f;
+    font-size: 24px;
+    padding: 5%;
+    padding-left: 15%;
+    color: #fff;
+}
+
+project-body-hidden {
+    display: block;
+    transform: translateY(100%);
+    transition: all .25s ease-in-out;
+    color: #fff;
+}
+
+article:hover project-body {
+    transform: translateY(40%) rotate(0deg);
+}
+
+article:hover project-body-hidden {
+    transform: translateY(0%);
+    background: #bc0f0f;
+    padding: 5%;
+    height: 100%;
+}
+
+article:hover view-button {
+    transform: translate(0%, 0%) rotate(0deg);
+}
+
+view-button {
+    position: absolute;
+    bottom: 2%;
+    right: 0;
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-transform: uppercase;
+    border: none;
+    color: #bc0f0f;
+    background: #fff;
+    padding: 4%;
+    transform: translate(100%, 0%) rotate(-45deg);
+    transition: all .2s ease-in-out;
+    transition-delay: .1s;
+    text-align: center;
+    z-index: 4;
+}
