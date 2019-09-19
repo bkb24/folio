@@ -4,9 +4,14 @@
     box-sizing: border-box;
 }
 
-main {
-
+a {
+    color: rgb(133, 0, 115);
 }
+
+/* *:before,
+*:after {
+    content: '';
+} */
 
 .header-meat {
     position: relative;

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="competences.css">
     <link rel="stylesheet" href="blog.css">
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="services.css">
 </head>
 <body>
 
@@ -22,7 +23,7 @@
                 <li class="main-nav-item"><a class="home" href="#">Home</a></li>
                 <li class="main-nav-item"><a class="projects" href="#">Projects</a></li>
                 <li class="main-nav-item"><a class="competences" href="#">Skills & Services</a></li>
-                <li class="main-nav-item"><a class="blog" href="#">Blog</a></li>
+                <!-- <li class="main-nav-item"><a class="blog" href="#">Blog</a></li> -->
                 <li class="main-nav-item"><a class="contact" href="#">Contact</a></li>
             </ul>
         </nav>
@@ -33,7 +34,7 @@
                 <li class="main-menu-item active-js"><a class="home" href="#">Welcome</a></li>
                 <li class="main-menu-item"><a class="projects" href="#">Projects</a></li>
                 <li class="main-menu-item"><a class="competences" href="#">Skills & Services</a></li>
-                <li class="main-menu-item"><a class="blog" href="#">Blog</a></li>
+                <!-- <li class="main-menu-item"><a class="blog" href="#">Blog</a></li> -->
                 <li class="main-menu-item"><a class="contact" href="#">Contact</a></li>
             </ul>
         </nav>
@@ -279,7 +280,7 @@
                     <div class="project-cta">
                         <div class="project-address"></div>
                         <div class="project-code">
-                            <h4>Code at</h4>
+                            <h4>Code at: </h4>
                             <img src="./images/github-icon.svg" alt="">
                             <a href="https://github.com/bkb24/simple-user-behavior-recording">github</a>
                             <!-- <img src="./images/gitlab-icon.svg" alt=""> -->
@@ -417,11 +418,52 @@
                 </div>
             </div>
 
+            <div class="home-goto-wrap">
+                <a class="home-goto-projects" href="#">See all</a>
+            </div>
+
         </section>
 
-        <section class="home-services"></section>
-        <section class="home-skills"></section>
-        <section class="home-contacts"></section>
+        <section class="home-services">
+
+            <svg class="services-logo">
+                <!-- <use href="http://folio.test/images/services-icon.svg#services-icon" /> -->
+                <use href="http://folio.test/images/services-icon3.svg#services-icon" />
+            </svg>
+
+            <h3 class="services-heading">Services</h3>
+            <h5>Creating, managing and extending websites and applications</h5>
+
+            <div class="services-separator">
+                <div class="subhero">
+                    <p>As a full stack web developer with more than 5 years experience in web design and web technologies</p>
+                    <p>what can I do for you?</p>
+                </div>
+            </div>
+
+            <ul class="services-overview">
+                <li>I can make you a company or a personal portfolio website in Wordpress or a custom one if you like</li>
+                <li>Maybe you want a web store or just a product catalog, I can do that for you</li>
+                <li>Also if you need some help with the development of a part of your application, an API or help fixing a bug I am ready to help</li>
+                <li>You don't need to worry about dealing with hosting and all that stuff, you can leave it to me</li>
+            </ul>
+
+            <ul>
+                <li>Contact me about the idea you have</li>
+                <li>I will look at it and see if I can help you</li>
+                <li>We talk, plan and make it happen</li>
+            </ul>
+
+        </section>
+
+        <section class="home-skills">
+
+        </section>
+
+        <section class="home-contacts">
+            <!--  -->
+        </section>
+
     </main>
 
     <script>
@@ -465,26 +507,34 @@
         let mainMenuItems = Array.from(mainMenu.children);
 
         window.addEventListener('scroll', function(e) {
-            if (window.scrollY + 70 > mainMenu.offsetTop) {
-                fixedNav.classList.remove('hidden');
-            } else {
-                fixedNav.classList.add('hidden');
-            }
+            window.scrollY + 70 > mainMenu.offsetTop ?
+                fixedNav.classList.remove('hidden') : fixedNav.classList.add('hidden');
 
             mainMenuItems.forEach((item, index) => {
                 if (window.scrollY + 70 > item.offsetTop + mainMenu.offsetTop) {
                     if (!item.classList.contains('hidden')) {
                         item.classList.add('hidden');
-                        fixedNav.children[0].style.transform = `translateX(${(100 - (index + 1) * 20)}%)`;
+                        moveMenu(index);
                     }
                 } else {
                     if (item.classList.contains('hidden')) {
                         item.classList.remove('hidden');
-                        fixedNav.children[0].style.transform = `translateX(${(100 - index * 20)}%)`;
+                        moveMenu(index - 1);
                     }
                 }
             });
         });
+
+        function moveMenu(index) {
+            let len = 0;
+            let arr = Array.from(fixedNav.children[0].children);
+
+            arr.forEach((item, i) => {
+                if (i > index) return;
+                len += item.offsetWidth;
+            });
+            fixedNav.children[0].style.transform = `translateX(${fixedNav.children[0].offsetWidth - len}px)`;
+        }
 
     </script>
 

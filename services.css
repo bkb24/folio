@@ -1,0 +1,130 @@
+.services-heading {
+    margin-bottom: .5rem;
+    font-size: 3rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    text-align: center;
+    /* padding-left: 7rem; */
+    /* color: rgb(0, 90, 102); */
+}
+
+.home-services {
+    background: linear-gradient(110deg, rgb(0, 135, 153) 0%, rgb(218, 50, 139) 100%);
+    background: rgb(0, 90, 102);
+    background: linear-gradient(-110deg, rgb(0, 179, 202) 0%, rgb(0, 90, 102) 100%);
+    color: #fff;
+    position: relative;
+    margin-top: 7rem;
+    padding-top: 5rem;
+}
+
+.home-services h5 {
+    font-family: 'Lato', sans-serif;
+    /* color: rgb(0, 90, 102); */
+    text-align: center;
+    /* color: #fff; */
+    /* color: rgb(238, 255, 0); */
+    /* color: rgb(218, 50, 139); */
+    color: #eee;
+    margin-bottom: 5rem;
+}
+
+.services-separator {
+    width: 100%;
+    margin: auto;
+    background: #fff;
+    margin-top: 3rem;
+    transform: skewY(-1deg);
+    padding: 2rem;
+}
+
+.home-services .subhero {
+    /* background: rgb(0, 90, 102); */
+    /* background: rgba(0, 135, 153, 1); */
+    /* background: linear-gradient(110deg, rgb(0, 135, 153) 0%, rgb(218, 50, 139) 100%); */
+    position: relative;
+    /* color: #fff; */
+    font-size: 1.5rem;
+    /* padding: 1rem; */
+    margin-top: 2rem;
+    /* margin-bottom: 5rem; */
+    margin-bottom: 1rem;
+    color: rgb(0, 90, 102);
+    transform: skewY(1deg);
+}
+
+.home-services:before,
+.home-services:after {
+    content: '';
+    background: rgba(0, 135, 153, 1);
+    /* background: linear-gradient(110deg, rgb(0, 135, 153) 0%, rgb(218, 50, 139) 100%); */
+
+    background: #fff;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4rem;
+    /* border: 1px solid #000; */
+    /* border-left: 10px solid transparent; */
+    /* border-top: 10px solid red; */
+    left: 0;
+    /* opacity: .2; */
+    /* bottom: -80%; */
+    /* z-index: -1; */
+}
+
+.home-services:before {
+    top: 0;
+    transform: translateY(-50%) skewY(-1deg);
+}
+
+.home-services:after {
+    bottom: 0;
+    transform: translateY(50%) skewY(-1deg);
+}
+
+.home-services p {
+    font-size: 2rem;
+    text-align: center;
+    margin: auto;
+    width: 70%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+.home-services p:first-child {
+    margin-bottom: 2.5rem;
+}
+
+.services-overview {
+    font-family: 'Open sans', 'sans-serif';
+    font-size: 1.125rem;
+    font-weight: 600;
+    /* position: absolute; */
+    /* z-index: 2; */
+    margin: auto;
+    /* margin-top: -5rem; */
+    position: relative;
+    width: 55%;
+    padding: 3rem;
+}
+
+.services-overview li {
+    padding: .5rem;
+}
+
+.services-logo {
+    width: 5rem;
+    height: 5rem;
+    stroke: rgb(0, 156, 177);
+    stroke: #fff;
+    fill: #fff;
+    fill: transparent;
+    display: block;
+    margin: auto;
+}
+
+.services-logo use {
+    width: 100%;
+    height: 100%;
+}
