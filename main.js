@@ -1,15 +1,16 @@
 let home = document.querySelector('.home-screen.home');
 let projects = document.querySelector('.home-screen.projects');
+let services = document.querySelector('.home-screen.services');
 let competences = document.querySelector('.home-screen.competences');
 let blog = document.querySelector('.home-screen.blog');
 let contact = document.querySelector('.home-screen.contact');
 let servicesMenuItems = document.querySelectorAll('.services-item-heading');
-let servicesMenu = document.querySelector('.services-content');
 let servicesWrap = document.querySelector('.services-wrap');
 let servicesNavItems = document.querySelectorAll('.services-overview li');
+let servicesNav = document.querySelector('.services-overview');
 
 let homeScreens = {
-    home, projects, blog, competences, contact
+    home, projects, blog, competences, services, contact
 }
 
 let mainMenu = document.getElementById('main-menu-js');
@@ -61,13 +62,13 @@ window.addEventListener('scroll', function(e) {
     let fromTop = window.scrollY;
     let servicesOffsetTop = servicesWrap.offsetTop;
 
-    if (servicesOffsetTop > fromTop) return console.log('test');
+    if (servicesOffsetTop > fromTop) return;
 
     servicesMenuItems.forEach((item, i) => {
         let elTop = servicesOffsetTop + item.offsetTop;
         let elBottom = elTop + item.parentElement.offsetHeight;
 
-        if (elTop <= fromTop + 200 && elBottom - 150 > fromTop
+        if (elTop <= fromTop + 160 && elBottom - 100 > fromTop
             ) {
                 document.querySelector(`li[data-name="${item.dataset.name}"]`).classList.add('active');
                 item.classList.add('active');
@@ -88,3 +89,15 @@ function moveMenu(index) {
     });
     fixedNav.children[0].style.transform = `translateX(${fixedNav.children[0].offsetWidth - len}px)`;
 }
+
+servicesNav.addEventListener('click', e => {
+    let name = e.target.dataset.name ? e.target.dataset.name : e.target.parentElement.dataset.name;
+    let servicesOffsetTop = servicesWrap.offsetTop;
+
+    servicesNavItems.forEach(item => {
+        if (item.dataset.name == name) {
+            let itemOffsetTop = document.querySelector(`.services-item-heading[data-name="${name}"]`).offsetTop;
+            window.scrollTo(0, servicesOffsetTop + itemOffsetTop - 100);
+        }
+    })
+});
