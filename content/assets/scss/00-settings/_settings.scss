@@ -1,0 +1,52 @@
+$color-primary: #006262;
+$color-primary-light: #008799;
+$color-secondary: #850073;
+$color-secondary-light: #da328b;
+$color-secondary-dark: #ad266e;
+
+$color-text: #333;
+
+$color-gradient-primary: rgb(0, 135, 153);
+$color-gradient-secondary: rgb(218, 50, 139);
+
+$gradient-primary: linear-gradient(-110deg, rgb(0, 179, 202) 0%, rgb(0, 90, 102) 100%);
+$gradient-mixed: linear-gradient(110deg, rgb(0, 135, 153) 0%, rgb(218, 50, 139) 100%);
+
+$vars: (
+    color: (
+        primary:            $color-primary,
+        secondary:          $color-secondary,
+        primary-light:      $color-primary-light,
+        secondary-light:    $color-secondary-light,
+        secondary-dark:     $color-secondary-dark,
+
+        text:               $color-text
+    ),
+    gradient: (
+        primary-color:      $color-gradient-primary,
+        secondary-color:    $color-gradient-secondary,
+
+        primary-gradient:   $gradient-primary,
+        mixed-gradient:     $gradient-mixed
+    ),
+    breakpoint: (
+        xxs: 320px,
+        xs: 568px,
+        sm: 768px,
+        m: 1025px,
+        l: 1200px,
+        xl: 1920px
+    ),
+    z-index: (
+        0: 0,
+        1: 10,
+        2: 20,
+        3: 30,
+        4: 40,
+        5: 50
+    ),
+    icons: (
+        size: 1.5rem,
+        // head:
+    )
+);

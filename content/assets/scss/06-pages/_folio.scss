@@ -1,0 +1,46 @@
+.projects-wrap {
+    position: relative;
+    z-index: 1;
+}
+
+.projects-heading {
+    margin-top: 5rem;
+    margin-bottom: .5rem;
+
+    font-size: 3rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    text-align: center;
+
+    color: rgb(0, 90, 102);
+}
+
+.projects-subheading {
+    margin-bottom: 3rem;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    color: get-color('primary');
+}
+
+.projects-subheading a {
+    font-weight: 900;
+}
+
+.home-goto-wrap {
+    text-align: center;
+}
+
+.home-goto-projects {
+    display: inline-block;
+    font-family: 'Lato', 'sans-serif';
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    margin: auto;
+
+    background: linear-gradient(110deg, rgb(0, 135, 153) 0%, rgb(218, 50, 139) 100%);
+    padding: .75rem 2.5rem;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+}

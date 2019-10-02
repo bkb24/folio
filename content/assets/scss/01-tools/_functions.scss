@@ -1,0 +1,143 @@
+$browser-context: 16; // Default browser font size
+
+/// Convert pixels to rems based on the browser default font-size ($context)
+/// @param {number} $pixels - pixels
+/// @param {number} $context - the browser default font size
+@function rem($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}rem;
+}
+
+/// Convert pixels to ems based on the browser default font-size ($context)
+/// @param {number} $pixels - pixels
+/// @param {number} $context - the browser default font size
+@function em($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}em;
+}
+
+/// Get the first element from a list
+/// @param {List} $list
+@function first($list) {
+	@return nth($list, 1);
+}
+
+/// Get the last element from a list
+/// @param {List} $list
+@function last($list) {
+	@return nth($list, length($list));
+}
+
+/// Explode a string by a given delimiter
+/// @param {String} $string
+/// @param {String} $delimiter
+/// @return {List} - list with elements
+@function explode($string, $delimiter: '.') {
+	$result: ();
+
+    @if $delimiter == "" {
+		@for $i from 1 through str-length($string) {
+			$result: append($result, str-slice($string, $i, $i));
+		}
+		@return $result;
+	}
+
+    $exploding: true;
+
+	@while $exploding {
+		$d-index: str-index($string, $delimiter);
+		@if $d-index {
+			@if $d-index > 1 {
+				$result: append($result, str-slice($string, 1, $d-index - 1));
+				$string: str-slice($string, $d-index + str-length($delimiter));
+			} @else if $d-index == 1 {
+				$string: str-slice($string, 1, $d-index + str-length($delimiter));
+			} @else {
+				$result: append($result, $string);
+				$exploding: false;
+			}
+		} @else {
+			$result: append($result, $string);
+			$exploding: false;
+		}
+    }
+
+	@return $result;
+}
+
+/// Get a key from a map by comma separated list
+/// @param {Map} $map
+/// @param {String} $keyName
+/// @param {*} - key value
+@function mget($map, $keyName) {
+	@if str-index($keyName, '.') == null {
+		@return map-get($map, $keyName);
+	}
+
+	$keysList: explode($keyName);
+	$value: $map;
+
+	@each $key in $keysList {
+		$value: map-get($value, $key);
+	}
+
+	@return $value;
+}
+
+/// Map deep get
+/// @author Hugo Giraudel
+/// @access public
+/// @param {Map} $map - Map
+/// @param {Arglist} $keys - Key chain
+/// @return {*} - Desired value
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+	}
+
+    @return $map;
+}
+
+/// Find color in globally defined variables
+/// @access public
+/// @param {String} $name - Color name
+/// @param {String} $alpha - Alpha value
+/// @return {*} - Color value
+@function get-color($name, $alpha: 1) {
+	$value: map-deep-get($vars, "color", $name);
+    @if $value == null {
+        @error "Color name: `#{$name}` does not exist in $vars map";
+	}
+
+	@if $alpha != 1 {
+		@return rgba($value, $alpha);
+    }
+
+	@return $value;
+}
+
+/// Get a property/setting from global $vars
+/// @param {String} $name
+/// @param {Arglist} $keys
+@function var($name, $keys...) {
+	$namespace: map-get($vars, $name);
+
+	@if $namespace == null {
+		@error "Namespace `#{$name}` does not exist in $vars map";
+	} @else {
+		$value: map-deep-get($namespace, $keys...);
+
+		@if $value == null {
+			@error "One or more of the keys [#{$keys}] do not exist in $vars.#{$name}";
+		}
+		@return $value;
+	}
+	@return null;
+}
+
+@function z-index($level: 0) {
+	$value: map-deep-get($vars, "z-index", $level);
+	@if $value == null {
+		@error "Level `#{$level}` does not exist in the z-index settings";
+	}
+
+	@return $value;
+}

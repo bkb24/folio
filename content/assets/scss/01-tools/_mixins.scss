@@ -1,0 +1,170 @@
+/// Add width and height.
+/// If no parameters supplied adds 100% width and height.
+/// If only width supplied makes a square
+/// @param $w
+///  @param $h
+@mixin size($w: 100%, $h: null) {
+    width: $w;
+
+    @if $h == null {
+        height: $w;
+    } @else {
+        height: $h;
+    }
+}
+
+@mixin flex-center() {
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin center() {
+    transform: translate(-50%, -50%);
+}
+
+/// Make an overlay over the relative parent
+/// @param {String} $bg - background color ot image
+@mixin overlay($bg: rgba(0, 0, 0, .1)) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: #{$bg};
+}
+
+/// Make overlay with full paent coverage
+/// @param {String} $bg - background color
+/// @param {String} $content - content attribute value
+@mixin pseudo-overlay($bg: null, $content: '') {
+    content: $content;
+    @if ($bg == null) {
+        @include overlay();
+    } @else {
+        @include overlay($bg);
+    }
+}
+
+/// Add css variables from global $vars
+@mixin make-vars() {
+    @each $key, $value in $vars {
+        @each $name, $value in map-get($vars, $key) {
+            --#{$key}-#{$name}: #{$value};
+        }
+    }
+}
+
+/// Breakpoints
+@mixin breakpoint($sizeFrom, $sizeTo: null) {
+	$from: map-deep-get($vars, 'breakpoint', $sizeFrom);
+    $to: map-deep-get($vars, 'breakpoint', $sizeTo);
+
+    $fromVal: if($from, $from, $sizeFrom);
+    $toVal: if($from, $from, $sizeTo);
+
+    @if $sizeTo == null {
+        @media (min-width: $fromVal) {
+            @content;
+        }
+    } @else {
+        @media (min-width: $fromVal) and (max-width: $toVal - 1) {
+            @content;
+        }
+    }
+}
+
+/// Breakpoint min-width
+/// @param {String} $size
+@mixin breakpoint-up($size) {
+	$value: map-deep-get($vars, 'breakpoint', $size);
+
+    @if $value == null {
+        @media (min-width: $size) {
+            @content;
+        }
+    } @else {
+        @media (min-width: $value) {
+            @content;
+        }
+    }
+
+}
+
+/// Breakpoint max-width
+/// @param {String} $size
+@mixin breakpoint-down($size) {
+    $value: map-deep-get($vars, 'breakpoint', $size);
+
+    @if $value == null {
+        @media (max-width: $size) {
+            @content;
+        }
+    } @else {
+        @media (max-width: $value - 1) {
+            @content;
+        }
+    }
+}
+
+@mixin z-index($level) {
+    z-index: z-index($level);
+}
+
+@mixin svg-icon() {
+    @include size(var('icons', 'size'));
+    fill: get-color('primary');
+}
+
+@mixin svg-icon-outline() {
+    @include size(var('icons', 'size'));
+    fill: none;
+    stroke: get-color('primary');
+}
+
+@mixin project-bg($reverse: false) {
+    $angle: if($reverse, -160deg, 160deg);
+
+    background: linear-gradient(
+        #{$angle},
+
+        #fff 0%,
+
+        #fff 15%,
+
+        #fff 44%,
+
+        rgba(0, 135, 153, .15) 66%,
+        rgba(0, 135, 153, .25) 77%,
+
+        #eee 77%,
+        #eee 79%,
+
+        #fff 79%,
+        #fff 100%
+    );
+}
+
+@mixin fade-y($color: #fff, $height: 10rem) {
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+    }
+
+    &:before {
+        top: 0;
+        left: 0;
+        right: 0;
+        height: $height;
+        background: linear-gradient(180deg, #{$color} 0%, transparent 100%);
+    }
+
+    &:after {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: $height;
+        background: linear-gradient(360deg, #{$color} 0%, transparent 100%);
+    }
+}

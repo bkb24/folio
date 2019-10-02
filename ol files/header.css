@@ -1,11 +1,11 @@
-.bkb-header {
+.hero {
     height: 100vh;
     display: flex;
     overflow: hidden;
     position: static;
 }
 
-.bkb-header:before {
+.hero:before {
     content: '';
     position: absolute;
     left: 0;
@@ -62,7 +62,7 @@
     z-index: -2;
 }
 
-.bkb-header:after {
+.hero:after {
     content: '';
     position: absolute;
     left: 0;

@@ -1,4 +1,4 @@
-.home-screen.contact {
+.hero-screen-contact {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -10,13 +10,13 @@
     padding: 3rem;
 }
 
-.hero-contact-col h3 {
+.hero-contact-heading {
     font-family: 'Lato', sans-serif;
     margin-bottom: 2rem;
     font-size: 2rem;
 }
 
-.hero-contact-col p {
+.hero-contact-text {
     font-family: 'Open Sans', sans-serif;
     margin-bottom: 1rem;
     font-weight: 500;
@@ -26,7 +26,6 @@
     flex: 2;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
 }
 
 .hero-contact-form {
@@ -35,30 +34,26 @@
     padding: 2rem 3rem;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-    font-family: 'Open Sans', sans-serif;
-    /* font-size: 1rem; */
 }
 
-.contact-line {
+.hero-contact-line {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     margin-bottom: .75rem;
 }
 
-.contact-line label {
+.hero-contact-label {
     width: 100%;
     margin-bottom: .25rem;
     font-size: .9rem;
 }
 
-.contact-line input,
-.contact-line textarea {
-    width: 100%;
+.hero-contact-item {
+    flex-grow: 1;
     border: 1px solid #dfdfdf;
     border-radius: 5px;
     padding: .5rem;
-    /* box-shadow: 0 0 5px rgba(0, 0, 0, .1); */
 }
 
 .hero-send {
@@ -76,10 +71,10 @@
     border-radius: 5px;
     background: rgb(0, 135, 153);
     background: linear-gradient(110deg, rgb(0, 135, 153) 0%, rgb(218, 50, 139) 100%);
-    /* background: rgb(218, 50, 139); */
 }
 
-.contact-line h5 {
+.contact-hint {
     font-weight: 500;
     font-size: .75rem;
+    text-transform: none;
 }

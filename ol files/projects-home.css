@@ -4,10 +4,15 @@
     width: 84%;
     transform: skewX(-7deg);
     -webkit-backface-visibility: hidden;
+    opacity: 1;
 }
 
 .home-screen.projects.hidden {
     /* transform: translateY(-100%); */
+}
+
+.home-screen.projects .project-col {
+    /* border: 1px solid red; */
 }
 
 .home-screen.projects.hidden .project-col {

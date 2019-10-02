@@ -414,9 +414,11 @@
     margin-bottom: .25rem;
 }
 
-.project-code img {
-    width: 2.75rem;
-    height: 2.75rem;
+.project-code svg {
+    fill: rgb(0, 98, 98);
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: .5rem;
 }
 
 .project-code a {

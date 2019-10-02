@@ -1,0 +1,88 @@
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    @include size();
+}
+
+.quick-menu-social {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+
+    svg {
+        @include svg-icon;
+        margin-right: .5rem;
+    }
+}
+
+.side-menu-title {
+    font-family: 'Lato', sans-serif;
+    margin-bottom: .5rem;
+    margin-left: .5rem;
+    color: get-color('primary');
+}
+
+.side-menu {
+    position: static;
+}
+
+.side-menu-item {
+    list-style: none;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+
+    @for $i from 1 to 6 {
+        $x: ($i * 3 + 40) * 1%  * -1;
+
+        &:nth-child(#{$i}) .side-menu-link {
+            transform: translateX(#{$x}) skewX(-7deg);
+        }
+    }
+
+    &.hidden {
+        .side-menu-link {
+            transform: translateX(-105%) skewX(-7deg);
+        }
+    }
+}
+
+.side-menu-link {
+    display: block;
+    width: 25vw;
+    padding: 1rem 2rem;
+
+    border-radius: 4px;
+
+    text-align: right;
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+    background: rgba(get-color('primary'), .9);
+
+    transition: all .2s ease-in-out;
+}
+
+.side-menu-item-name {
+    display: block;
+    transform: skewX(7deg);
+}
+
+.side-menu-item .side-menu-link.active,
+.side-menu-item .side-menu-link:hover {
+    box-shadow: 4px 5px 0 rgba(get-color('primary'), .5);
+    transform: translateX(-35%) skewX(-7deg);
+    background: get-color('secondary-dark');
+}
+
+.hero-screen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75vw;
+    height: 100%;
+}

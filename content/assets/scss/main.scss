@@ -1,0 +1,36 @@
+// settings, variables
+@import './00-settings/settings';
+
+// tools
+@import './01-tools/functions';
+@import './01-tools/mixins';
+
+// generic
+@import './02-generic/reset';
+
+// base (elements) styles
+@import './03-base/fonts';
+@import './03-base/general';
+
+// layouts from object layer
+@import './04-structure/grid';
+@import './04-structure/layout';
+
+// modules or as components in ITCSS
+@import './05-modules/icons';
+@import './05-modules/buttons';
+@import './05-modules/header';
+@import './05-modules/footer';
+@import './05-modules/menu';
+@import './05-modules/side-menu';
+@import './05-modules/project-item';
+
+// pages
+@import './06-pages/home/home';
+@import './06-pages/folio';
+@import './06-pages/services';
+@import './06-pages/skills';
+@import './06-pages/contact';
+
+// trumps
+@import './utils/main';

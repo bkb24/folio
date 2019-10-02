@@ -1,0 +1,46 @@
+.hero-screen-skills {
+    height: 100%;
+}
+
+.hero-skills-wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hero-skills-heading {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+
+    font-family: 'Lato', 'sans-serif';
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: get-color('primary');
+}
+
+.hero-skills-card {
+    padding: 2rem;
+    padding-bottom: 2.5rem;
+    font-family: 'Lato', sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    background: rgba(255, 255, 255, .7);
+    margin-right: 2rem;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.hero-skills-type-heading {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.hero-skills-list {
+    margin-left: 2rem;
+}

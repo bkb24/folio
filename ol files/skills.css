@@ -140,11 +140,12 @@
 }
 
 .skills-item ul {
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
 }
 
 .skills-item li {
-    padding: .25rem;
+    list-style: none;
+    padding: .5rem 0;
 }
 
 .skills-graphic {
@@ -191,4 +192,15 @@
     text-align: center;
 }
 
+.skills-other {
+    justify-content: space-between;
+}
 
+.skills-other .skills-item {
+    width: 24%;
+}
+
+.skills-other .skills-item {
+    margin: 0;
+    /* margin-bottom: 2rem; */
+}

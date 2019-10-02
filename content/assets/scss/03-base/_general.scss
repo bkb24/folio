@@ -1,0 +1,23 @@
+html {
+    font-family: 'Open Sans', 'sans-serif';
+    color: get-color('text');
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    color: get-color('secondary');
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Lato', 'sans-serif';
+}
+
+.heading {
+    font-family: 'Lato', 'sans-serif';
+    text-transform: uppercase;
+    color: get-color('primary');
+}
