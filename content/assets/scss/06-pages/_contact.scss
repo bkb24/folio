@@ -169,69 +169,6 @@
     fill: #fff;
 }
 
-.contacts-form {
-    width: 30rem;
-    margin: auto;
-    margin-top: 2rem;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.contacts-form input,
-.contacts-form textarea {
-    border: none;
-    border-bottom: 1px solid rgba(0, 98, 98, .25);
-    border-radius: 0;
-    transition: all .15s ease-in-out;
-}
-
-.contacts-form textarea {
-    font-family: 'Open Sans', sans-serif;
-}
-
-.contacts-form input:focus,
-.contacts-form textarea:focus {
-    border-bottom: 2px solid rgba(0, 98, 98, 1);
-}
-
-.contacts-form .contact-line label {
-    order: 1;
-}
-
-.contacts-form .contact-line svg {
-    order: 2;
-    /* align-items: center; */
-}
-
-.contacts-form .contact-line input,
-.contacts-form .contact-line textarea {
-    order: 3;
-}
-
-.contacts-form .contact-line svg {
-    width: .75rem;
-    height: .75rem;
-    fill: none;
-    stroke: rgba(0, 98, 98, 1);
-    stroke-width: 3;
-    transform: rotate(-90deg);
-    margin-top: .5rem;
-    margin-left: -.75rem;
-    margin-right: .01rem;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    transition: all .15s ease-in-out;
-}
-
-.contacts-form input:focus ~ svg,
-.contacts-form textarea:focus ~ svg {
-    stroke-dashoffset: 0;
-}
-
-.contacts-form h5 {
-    color: rgb(0, 98, 98);
-}
-
-
 //
 .contacts-head {
     color: #fff;
@@ -322,7 +259,6 @@
 .contacts-form input,
 .contacts-form textarea {
     border: none;
-    border-bottom: 1px solid rgba(0, 98, 98, .25);
     border-radius: 0;
     transition: all .15s ease-in-out;
     border-top: 1px solid transparent;
@@ -332,19 +268,24 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+.form-field-underline {
+    width: 100%;
+    height: 2px;
+    border-bottom: 1px solid rgba(get-color('primary'), .15);
+    order: 5;
+    transition: all .15s ease-in-out;
+}
+
 .contacts-form input:focus,
 .contacts-form textarea:focus {
-    border-top: none;
-    border-bottom: 2px solid rgba(0, 98, 98, 1);
+
+    & + .form-field-underline {
+        border-bottom: 2px solid rgba(get-color('primary'), 1);
+    }
 }
 
 .contacts-form .contact-line label {
     order: 1;
-}
-
-.contacts-form .contact-line svg {
-    order: 2;
-    /* align-items: center; */
 }
 
 .contacts-form .contact-line input,
@@ -353,6 +294,8 @@
 }
 
 .contacts-form .contact-line svg {
+    order: 2;
+
     width: .75rem;
     height: .75rem;
     fill: none;
@@ -364,7 +307,7 @@
     margin-right: .01rem;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    transition: all .15s ease-in-out;
+    transition: all .25s ease-in-out;
 }
 
 .contacts-form input:focus ~ svg,

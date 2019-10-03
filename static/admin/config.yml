@@ -19,18 +19,18 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "folio"
-    label: "Folio"
-    folder: "content/folio"
-    create: true
-    slug: "{{slug}}"
-    editor:
-     preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "URL", name: "url", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Desktop shot", name: "main-img-d", widget: "image" }
-      - { label: "Mobile shot", name: "main-img-m", widget: "image" }
-      - { label: "Screens", name: "screens", widget: "list" }
-      - { label: "Technologies", name: "tech", widget: "list" }
+  # - name: "folio"
+  #   label: "Folio"
+  #   folder: "content/folio"
+  #   create: true
+  #   slug: "{{slug}}"
+  #   editor:
+  #    preview: false
+  #   fields:
+  #     - { label: "Title", name: "title", widget: "string" }
+  #     - { label: "URL", name: "url", widget: "string" }
+  #     - { label: "Description", name: "description", widget: "string" }
+  #     - { label: "Desktop shot", name: "main-img-d", widget: "image" }
+  #     - { label: "Mobile shot", name: "main-img-m", widget: "image" }
+  #     - { label: "Screens", name: "screens", widget: "list" }
+  #     - { label: "Technologies", name: "tech", widget: "list" }

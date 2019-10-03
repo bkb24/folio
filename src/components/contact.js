@@ -34,6 +34,7 @@ const Contact = () => {
                 <div className="contact-line">
                     <label htmlFor="">Name</label>
                     <input autoComplete="off" type="text" name="name" />
+                    <div className="form-field-underline"></div>
                     <svg viewBox="0 0 20 20">
                         <path d="M1 5 L10 13 L18 5" />
                     </svg>
@@ -42,6 +43,7 @@ const Contact = () => {
                 <div className="contact-line">
                     <label htmlFor="">Email</label>
                     <input autoComplete="off" type="text" name="email" />
+                    <div className="form-field-underline"></div>
                     <svg viewBox="0 0 20 20">
                         <path d="M1 5 L10 13 L18 5" />
                     </svg>
@@ -50,6 +52,7 @@ const Contact = () => {
                 <div className="contact-line">
                     <label htmlFor="">Message</label>
                     <textarea name="message" id="" cols="30" rows="10"></textarea>
+                    <div className="form-field-underline"></div>
                     <svg viewBox="0 0 20 20">
                         <path d="M1 5 L10 13 L18 5" />
                     </svg>
