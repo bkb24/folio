@@ -11,7 +11,7 @@
     top: 1rem;
     left: 1rem;
     display: flex;
-    align-items: center;
+    align-items: start;
 
     svg {
         @include svg-icon;

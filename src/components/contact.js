@@ -1,12 +1,27 @@
 import React from 'react'
 
 import icons from '../../content/assets/img/sprite.svg'
+import useForm from '../hooks/useForm'
+import validateContact from '../utils/validateContact'
 
 const Contact = () => {
+    const initialData = { name: '', email: '', message: '' }
+
+    const {
+        data,
+        errors,
+        onChange,
+        onBlur,
+        handleSubmit
+    } = useForm(
+        initialData,
+        validateContact
+    );
+
     return (
-        <section className="home-contacts">
-            <div className="contacts-head">
-                <div className="contacts-icon">
+        <section className="contact-section">
+            <div className="contact-head">
+                <div className="contact-icon">
                     <svg>
                         <use href={`${icons}#envelope`} />
                     </svg>
@@ -30,11 +45,19 @@ const Contact = () => {
                 </div>
             </div>
 
-            <form className="contacts-form" action="">
+            <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="contact-line">
                     <label htmlFor="">Name</label>
-                    <input autoComplete="off" type="text" name="name" />
+                    <input
+                        autoComplete="off"
+                        type="text"
+                        name="name"
+                        value={data.name}
+                        onChange={onChange}
+                        onBlur={onBlur}
+                    />
                     <div className="form-field-underline"></div>
+                    { errors.name && <p className="validation-error">{errors.name}</p> }
                     <svg viewBox="0 0 20 20">
                         <path d="M1 5 L10 13 L18 5" />
                     </svg>
@@ -42,8 +65,16 @@ const Contact = () => {
 
                 <div className="contact-line">
                     <label htmlFor="">Email</label>
-                    <input autoComplete="off" type="text" name="email" />
+                    <input
+                        autoComplete="off"
+                        type="text"
+                        name="email"
+                        value={data.email}
+                        onChange={onChange}
+                        onBlur={onBlur}
+                    />
                     <div className="form-field-underline"></div>
+                    { errors.email && <p className="validation-error">{errors.email}</p> }
                     <svg viewBox="0 0 20 20">
                         <path d="M1 5 L10 13 L18 5" />
                     </svg>
@@ -51,8 +82,17 @@ const Contact = () => {
 
                 <div className="contact-line">
                     <label htmlFor="">Message</label>
-                    <textarea name="message" id="" cols="30" rows="10"></textarea>
+                    <textarea
+                        name="message"
+                        id=""
+                        cols="30"
+                        rows="10"
+                        value={data.message}
+                        onChange={onChange}
+                        onBlur={onBlur}
+                    ></textarea>
                     <div className="form-field-underline"></div>
+                    { errors.message && <p className="validation-error">{errors.message}</p> }
                     <svg viewBox="0 0 20 20">
                         <path d="M1 5 L10 13 L18 5" />
                     </svg>

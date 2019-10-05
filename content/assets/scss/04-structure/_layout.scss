@@ -33,14 +33,14 @@ $container-py: 3rem;
 .footer-start {
     display: flex;
     @include flex-center;
-    padding-left: 2rem;
+    padding-left: 1.25rem;
 
     text-align: right;
     color: get-color('primary');
 }
 
 .footer-shape {
-    @include size(2rem);
+    @include size(1.75rem);
 
     margin-right: 1.25rem;
 
@@ -51,8 +51,7 @@ $container-py: 3rem;
 }
 
 .footer-big-shape {
-    width: 2.75rem;
-    height: 2.75rem;
+    @include size(2.25rem);
     background: var('gradient', 'primary-color');
 }
 
@@ -61,13 +60,13 @@ $container-py: 3rem;
 
     transform: skewX(-20deg);
 
-    padding: 1.5rem;
+    padding: 1rem;
     margin-right: -2rem;
 
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 
-    background: var('gradient', 'mixed-gradient');
+    background: var('gradient', 'mixed');
 
     color: #fff;
 }

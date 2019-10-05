@@ -4,6 +4,7 @@ $color-secondary: #850073;
 $color-secondary-light: #da328b;
 $color-secondary-dark: #ad266e;
 
+$color-danger: #af0040;
 $color-text: #333;
 
 $color-gradient-primary: rgb(0, 135, 153);
@@ -20,14 +21,15 @@ $vars: (
         secondary-light:    $color-secondary-light,
         secondary-dark:     $color-secondary-dark,
 
-        text:               $color-text
+        text:               $color-text,
+        danger:             $color-danger
     ),
     gradient: (
         primary-color:      $color-gradient-primary,
         secondary-color:    $color-gradient-secondary,
 
-        primary-gradient:   $gradient-primary,
-        mixed-gradient:     $gradient-mixed
+        primary:            $gradient-primary,
+        mixed:              $gradient-mixed
     ),
     breakpoint: (
         xxs: 320px,

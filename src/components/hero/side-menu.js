@@ -15,6 +15,9 @@ const SideMenu = React.forwardRef((props, ref) => (
                     <use href={`${icons}#github`} />
                 </svg>
             </a>
+            <a href="/pdf/CV.pdf" className="main-nav-social-link">
+                <span className="resume">Resume</span>
+            </a>
         </div>
 
         <h5 className="side-menu-title">Quick view menu</h5>

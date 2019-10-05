@@ -5,7 +5,7 @@ import fronEndImg from '../../content/assets/img/fron-end.svg'
 
 const Skills = () => {
     return (
-        <section className="home-skills">
+        <section className="skills-section">
             <div className="skills-icon">{`{ ... }`}</div>
             <h2>Skills</h2>
             <h5>My most used arsenal for development</h5>
@@ -14,8 +14,8 @@ const Skills = () => {
 
                 <div className="skills-content-bg"></div>
 
-                <div className="skills-section skills-backend">
-                    <h3 className="skills-section-heading">Back End Development</h3>
+                <div className="skills-component skills-backend">
+                    <h3 className="skills-component-heading">Back End Development</h3>
 
                     <div className="skill-items-wrap">
                         <div className="skills-general">
@@ -84,8 +84,8 @@ const Skills = () => {
                     </div>
                 </div>
 
-                <div className="skills-section skills-frontend">
-                    <h3 className="skills-section-heading">Front End Development</h3>
+                <div className="skills-component skills-frontend">
+                    <h3 className="skills-component-heading">Front End Development</h3>
                     <div className="skills-graphic">
                         <img src={fronEndImg} alt="front end development" />
                     </div>
@@ -145,8 +145,8 @@ const Skills = () => {
                     </div>
                 </div>
 
-                <div className="skills-section skills-other">
-                    <h3 className="skills-section-heading">Other relevant skills</h3>
+                <div className="skills-component skills-other">
+                    <h3 className="skills-component-heading">Other relevant skills</h3>
                     <div className="skills-item">
                         <h3>Version control</h3>
                         <ul>
@@ -178,7 +178,10 @@ const Skills = () => {
                         </ul>
                     </div>
                 </div>
+            </div>
 
+            <div className="txt-align-center">
+                <a href="/pdf/CV.pdf" className="skills-resume-btn">See Resume</a>
             </div>
         </section>
     )

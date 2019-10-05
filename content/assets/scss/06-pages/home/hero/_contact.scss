@@ -41,6 +41,10 @@
     flex-wrap: wrap;
     width: 100%;
     margin-bottom: .75rem;
+
+    .validation-error {
+        margin-top: .25rem;
+    }
 }
 
 .hero-contact-label {
@@ -51,6 +55,7 @@
 
 .hero-contact-item {
     flex-grow: 1;
+    width: 100%;
     border: 1px solid #dfdfdf;
     border-radius: 5px;
     padding: .5rem;

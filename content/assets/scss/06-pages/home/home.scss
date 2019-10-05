@@ -4,3 +4,14 @@
 @import './hero/services';
 @import './hero/skills';
 @import './hero/contact';
+
+// sections margins and paddings
+.index-page {
+
+    .folio-section,
+    .services-section,
+    .skills-section,
+    .contact-section {
+        margin-top: 5rem;
+    }
+}

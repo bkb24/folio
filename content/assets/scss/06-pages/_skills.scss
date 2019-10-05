@@ -1,6 +1,6 @@
-.home-skills {
-    margin-top: 4rem;
+.skills-section {
     position: relative;
+    margin-top: 8rem;
 }
 
 .skills-icon {
@@ -10,7 +10,7 @@
     margin-bottom: .5rem;
 }
 
-.home-skills h2 {
+.skills-section h2 {
     margin-bottom: .5rem;
     font-size: 3rem;
     font-family: 'Lato', sans-serif;
@@ -19,7 +19,7 @@
     color: rgb(0, 90, 102);
 }
 
-.home-skills h5 {
+.skills-section h5 {
     text-align: center;
     font-family: 'Lato', sans-serif;
     /* font-weight: 900; */
@@ -68,17 +68,17 @@
     /* position: relative; */
 }
 
-.skills-section {
+.skills-component {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 3.5rem;
 }
 
-.skills-section > li {
+.skills-component > li {
     /* list-style: none; */
 }
 
-.skills-section-heading {
+.skills-component-heading {
     width: 100%;
     font-family: 'Lato', sans-serif;
     font-weight: 900;
@@ -184,11 +184,11 @@
     margin-left: 3rem;
 }
 
-.skills-backend .skills-section-heading {
+.skills-backend .skills-component-heading {
     /* text-align: right; */
 }
 
-.skills-other .skills-section-heading {
+.skills-other .skills-component-heading {
     text-align: center;
 }
 
@@ -203,4 +203,9 @@
 .skills-other .skills-item {
     margin: 0;
     /* margin-bottom: 2rem; */
+}
+
+.skills-resume-btn {
+    margin: auto;
+    @include btn-bounce;
 }

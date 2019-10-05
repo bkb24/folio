@@ -1,15 +1,9 @@
-.home-services {
-    /* background: linear-gradient(110deg, rgb(0, 135, 153) 0%, rgb(218, 50, 139) 100%); */
-    /* background: rgb(0, 90, 102); */
-    /* background: linear-gradient(-110deg, rgb(0, 179, 202) 0%, rgb(0, 90, 102) 100%); */
-}
-
 .services-head {
     color: #fff;
     background: linear-gradient(-110deg, rgb(0, 179, 202) 0%, rgb(0, 90, 102) 100%);
     position: relative;
-    margin-top: 7rem;
     padding: 5rem 0 7rem;
+    margin-top: 2rem;
 }
 
 .services-head:before,
@@ -34,7 +28,7 @@
     transform: translateY(50%) skewY(-1deg);
 }
 
-.home-services h5 {
+.services-section h5 {
     font-family: 'Lato', sans-serif;
     text-align: center;
     color: #eee;
@@ -54,14 +48,14 @@
     padding: 1rem 0 0;
 }
 
-.home-services .subhero {
+.services-section .subhero {
     position: relative;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: rgb(0, 90, 102);
 }
 
-.home-services .subhero h2 {
+.services-section .subhero h2 {
     font-family: 'Lato', sans-serif;
     text-align: center;
     /* margin-top: 1rem; */
@@ -376,28 +370,9 @@
 }
 
 .services-contact-cta {
-    text-align: center;
-    margin: 4rem 0 2rem;
+    margin: 2rem 0;
 }
 
 .services-contact-btn {
-    font-family: 'Open sans', 'sans-serif';
-    font-size: 1.125rem;
-    font-weight: 700;
-    /* color: #fff; */
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1rem 2rem;
-    border: 2px solid #fff;
-    border-radius: 5px;
-
-    background: #fff;
-    color: rgb(0, 90, 102);
-}
-
-.services-contact-btn:hover {
-    background: transparent;
-    /* background: linear-gradient(110deg, rgb(0, 135, 153) 0%, rgb(218, 50, 139) 100%); */
-    color: #fff;
+    @include btn-bounce;
 }

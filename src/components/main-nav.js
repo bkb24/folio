@@ -55,6 +55,9 @@ const MainNav = React.forwardRef((props, ref) => (
                     <use href={`${icons}#github`} />
                 </svg>
             </a>
+            <a href="/pdf/CV.pdf" className="main-nav-social-link">
+                <span className="resume">Resume</span>
+            </a>
         </div>
     </nav>
 ))

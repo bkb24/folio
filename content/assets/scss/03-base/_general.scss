@@ -16,8 +16,17 @@ h1, h2, h3, h4, h5 {
     font-family: 'Lato', 'sans-serif';
 }
 
+.txt-align-center {
+    text-align: center;
+}
+
 .heading {
     font-family: 'Lato', 'sans-serif';
-    text-transform: uppercase;
     color: get-color('primary');
+}
+
+.validation-error {
+    font-size: .75rem;
+    font-weight: 600;
+    color: get-color('danger');
 }

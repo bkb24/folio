@@ -1,10 +1,48 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { Link } from 'gatsby'
 
 import icons from '../../content/assets/img/sprite.svg'
 
 const Services = () => {
+    const servicesWrapRef = useRef();
+    const servicesContentRef = useRef();
+    const servicesSideMenuRef = useRef();
+
+    const handleScroll = () => {
+        let fromTop = window.scrollY;
+        let servicesOffsetTop = servicesWrapRef.current.offsetTop;
+        let servicesMenuItems = Array
+            .from(servicesContentRef.current.children)
+            .map(item => item.children[0]);
+        let servicesSideMenuItems = Array.from(servicesSideMenuRef.current.children);
+
+        if (servicesOffsetTop > fromTop) return;
+
+        servicesMenuItems.forEach((item, i) => {
+            let elTop = servicesOffsetTop + item.offsetTop;
+            let elBottom = elTop + item.parentElement.offsetHeight;
+
+            if (elTop <= fromTop + 160 && elBottom - 100 > fromTop
+                ) {
+                    servicesSideMenuItems[i].classList.add('active');
+                    item.classList.add('active');
+                } else {
+                    servicesSideMenuItems[i].classList.remove('active');
+                    item.classList.remove('active');
+                }
+        })
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }, []);
+
     return (
-        <section className="home-services">
+        <section className="services-section">
 
             <div className="services-head">
                 <svg className="services-logo">
@@ -24,12 +62,12 @@ const Services = () => {
                 </div>
             </div>
 
-            <div className="services-wrap">
+            <div className="services-wrap" ref={servicesWrapRef}>
                 <h2 className="services-welcome">
                     Here it is. Contact me if I can help you
                 </h2>
 
-                <ul className="services-overview">
+                <ul className="services-overview" ref={servicesSideMenuRef}>
                     <li data-name="new-website">
                         <svg viewBox="0 0 20 20">
                             <path d="M1 5 L10 13 L18 5" />
@@ -68,7 +106,7 @@ const Services = () => {
                     </li>
                 </ul>
 
-                <div className="services-content">
+                <div className="services-content" ref={servicesContentRef}>
 
                     <div className="serives-section services-new-site">
                         <h3 data-name="new-website" className="services-item-heading">
@@ -284,10 +322,10 @@ const Services = () => {
                         <div className="services-cta-step">We talk, plan and make it happen</div>
                     </li>
                 </ul>
+            </div>
 
-                <div className="services-contact-cta">
-                    <a className="services-contact-btn" href="#">Contact</a>
-                </div>
+            <div className="services-contact-cta txt-align-center">
+                <Link className="services-contact-btn" to={`/contact`}>Contact</Link>
             </div>
 
         </section>
