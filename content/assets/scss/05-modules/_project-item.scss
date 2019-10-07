@@ -1,17 +1,22 @@
 .project-item {
     display: flex;
+    flex-wrap: wrap;
 
-    @include container;
+    @include container(1rem, 2rem);
 
     margin: auto;
     margin-bottom: 2rem;
 
-    @include project-bg(true);
-
     position: relative;
     z-index: -2;
 
+    @include project-bg(true);
+
     @include fade-y;
+
+    @include breakpoint-up(m) {
+        @include container;
+    }
 }
 
 .project-item:nth-child(even) {
@@ -19,9 +24,14 @@
 }
 
 .project-content {
-    width: 40%;
+    width: 100%;
+
+    @include breakpoint-up(m) {
+        width: 40%;
+    }
+
     position: relative;
-    z-index: 10;
+    @include z-index(1);
 }
 
 .project-link-wrap {
@@ -62,23 +72,25 @@
 }
 
 .project-item:nth-child(even) {
-    .project-content {
-        order: 0;
-    }
+    @include breakpoint-up(m) {
+        .project-content {
+            order: 0;
+        }
 
-    .project-img-wrap {
-        order: 2;
-        justify-content: flex-end;
-    }
+        .project-img-wrap {
+            order: 2;
+            justify-content: flex-end;
+        }
 
-    .project-img-main {
-        order: 2;
-        margin-right: 0;
-        margin-left: 2rem;
-    }
+        .project-img-main {
+            order: 2;
+            margin-right: 0;
+            margin-left: 2rem;
+        }
 
-    .project-img-secondary {
-        order: 1;
+        .project-img-secondary {
+            order: 1;
+        }
     }
 }
 
@@ -124,32 +136,34 @@
 }
 
 .project-item:nth-child(even) {
-    .project-img-main {
-        &:before {
-            top: 0;
-            right: 0;
-            left: unset;
-            transform: translate(20%, -30%) skewX(-1deg);
+    @include breakpoint-up(m) {
+        .project-img-main {
+            &:before {
+                top: 0;
+                right: 0;
+                left: unset;
+                transform: translate(20%, -30%) skewX(-1deg);
+            }
+
+            &:after {
+                top: 0;
+                left: 0;
+                transform: translate(-20%, 30%) skewX(-1deg);
+            }
         }
 
-        &:after {
-            top: 0;
-            left: 0;
-            transform: translate(-20%, 30%) skewX(-1deg);
-        }
-    }
+        .project-img-secondary {
+            &:before {
+                top: 0;
+                left: 0;
+                transform: translate(-50%, -50%) skewX(-1deg);
+            }
 
-    .project-img-secondary {
-        &:before {
-            top: 0;
-            left: 0;
-            transform: translate(-50%, -50%) skewX(-1deg);
-        }
-
-        &:after {
-            bottom: 0;
-            left: 0;
-            transform: translate(-50%, -50%) skewX(-1deg);
+            &:after {
+                bottom: 0;
+                left: 0;
+                transform: translate(-50%, -50%) skewX(-1deg);
+            }
         }
     }
 }
@@ -159,8 +173,12 @@
 
     font-family: 'Lato', 'sans-serif';
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: get-color('primary-light');
+
+    @include breakpoint-up(m) {
+        font-size: 2rem;
+    }
 }
 
 .project-text {

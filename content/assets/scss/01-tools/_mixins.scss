@@ -110,13 +110,15 @@
     z-index: z-index($level);
 }
 
-@mixin svg-icon() {
-    @include size(var('icons', 'size'));
+@mixin svg-icon($size: null) {
+    $resolvedSize: if($size == null, var('icon', 'size'), $size);
+
+    @include size($resolvedSize);
     fill: get-color('primary');
 }
 
 @mixin svg-icon-outline() {
-    @include size(var('icons', 'size'));
+    @include size(var('icon', 'size'));
     fill: none;
     stroke: get-color('primary');
 }

@@ -8,6 +8,14 @@ const Services = () => {
     const servicesContentRef = useRef();
     const servicesSideMenuRef = useRef();
 
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }, []);
+
     const handleScroll = () => {
         let fromTop = window.scrollY;
         let servicesOffsetTop = servicesWrapRef.current.offsetTop;
@@ -33,13 +41,17 @@ const Services = () => {
         })
     }
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
+// servicesNav.addEventListener('click', e => {
+//     let name = e.target.dataset.name ? e.target.dataset.name : e.target.parentElement.dataset.name;
+//     let servicesOffsetTop = servicesWrap.offsetTop;
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        }
-    }, []);
+//     servicesNavItems.forEach(item => {
+//         if (item.dataset.name == name) {
+//             let itemOffsetTop = document.querySelector(`.services-item-heading[data-name="${name}"]`).offsetTop;
+//             window.scrollTo(0, servicesOffsetTop + itemOffsetTop - 100);
+//         }
+//     })
+// });
 
     return (
         <section className="services-section">

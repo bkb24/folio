@@ -11,7 +11,7 @@ const Welcome = () => {
 
             <div className="hero-welcome-copy">
                 <h1 className="heading main-heading">Web design <br /> & development</h1>
-                <h3 className="hero-welcome-subheading">Creating, managing and extending websites, web applications and services</h3>
+                <h3 className="hero-welcome-subheading">Creating, managing and extending web sites, applications and services</h3>
 
                 <ul className="hero-welcome-services">
                     <li className="hero-welcome-services-item">

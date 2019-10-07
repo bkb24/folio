@@ -1,7 +1,7 @@
 .resume {
     display: flex;
     @include flex-center;
-    @include size(auto, var('icons', 'size'));
+    @include size(auto, 2rem);
     padding: 0 .5rem;
 
     background: get-color('primary');
@@ -10,4 +10,8 @@
     color: #fff;
     border-radius: 5px;
     text-align: center;
+
+    @include breakpoint-up(m) {
+        @include size(auto, var('icon', 'size'));
+    }
 }

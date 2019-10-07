@@ -3,27 +3,41 @@
     flex-direction: column;
     position: relative;
     justify-content: center;
-    @include size();
+    width: 100%;
+
+    @include breakpoint-up(m) {
+        height: 100%;
+    }
 }
 
 .quick-menu-social {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    display: flex;
-    align-items: start;
+    display: none;
 
-    svg {
-        @include svg-icon;
-        margin-right: .5rem;
+    @include breakpoint-up(m) {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        display: flex;
+        align-items: start;
+
+        svg {
+            @include svg-icon;
+            margin-right: .5rem;
+        }
     }
 }
 
 .side-menu-title {
-    font-family: 'Lato', sans-serif;
-    margin-bottom: .5rem;
-    margin-left: .5rem;
-    color: get-color('primary');
+    display: none;
+
+    @include breakpoint-up(m) {
+        display: block;
+        font-family: 'Lato', sans-serif;
+        margin-bottom: .5rem;
+        margin-left: .5rem;
+        color: get-color('primary');
+    }
 }
 
 .side-menu {
@@ -52,19 +66,24 @@
 }
 
 .side-menu-link {
-    display: block;
-    width: 25vw;
-    padding: 1rem 2rem;
+    display: none;
 
-    border-radius: 4px;
+    @include breakpoint-up(m) {
+        display: block;
 
-    text-align: right;
-    color: inherit;
-    font-weight: bold;
-    text-decoration: none;
-    background: rgba(get-color('primary'), .9);
+        width: 25vw;
+        padding: 1rem 2rem;
 
-    transition: all .2s ease-in-out;
+        border-radius: 4px;
+
+        text-align: right;
+        color: inherit;
+        font-weight: bold;
+        text-decoration: none;
+        background: rgba(get-color('primary'), .9);
+
+        transition: all .2s ease-in-out;
+    }
 }
 
 .side-menu-item-name {
@@ -77,12 +96,4 @@
     box-shadow: 4px 5px 0 rgba(get-color('primary'), .5);
     transform: translateX(-35%) skewX(-7deg);
     background: get-color('secondary-dark');
-}
-
-.hero-screen {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 75vw;
-    height: 100%;
 }

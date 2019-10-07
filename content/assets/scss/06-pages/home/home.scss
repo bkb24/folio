@@ -12,6 +12,10 @@
     .services-section,
     .skills-section,
     .contact-section {
-        margin-top: 5rem;
+        margin-top: 2rem;
+
+        @include breakpoint-up(m) {
+            margin-top: 5rem;
+        }
     }
 }

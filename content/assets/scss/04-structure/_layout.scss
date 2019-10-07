@@ -1,15 +1,26 @@
-$container-px: 5rem;
-$container-py: 3rem;
+$container-px-m: 1rem;
+$container-py-m: 2rem;
+
+$container-px-d: 5rem;
+$container-py-d: 3rem;
 
 .container {
-    padding-left: $container-px;
-    padding-right: $container-px;
+    padding-left: $container-px-m;
+    padding-right: $container-px-m;
 
-    padding-top: $container-py;
-    padding-bottom: $container-py;
+    padding-top: $container-py-m;
+    padding-bottom: $container-py-m;
+
+    @include breakpoint-up(m) {
+        padding-left: $container-px-d;
+        padding-right: $container-px-d;
+
+        padding-top: $container-py-d;
+        padding-bottom: $container-py-d;
+    }
 }
 
-@mixin container($px: $container-px, $py: $container-py) {
+@mixin container($px: $container-px-d, $py: $container-py-d) {
     padding-left: $px;
     padding-right: $px;
 
@@ -22,7 +33,11 @@ $container-py: 3rem;
     display: flex;
     overflow: hidden;
 
-    margin-top: 7rem;
+    margin-top: 3rem;
+
+    @include breakpoint-up(m) {
+        margin-top: 7rem;
+    }
 
     font-family: 'Lato', sans-serif;
     font-size: .75rem;

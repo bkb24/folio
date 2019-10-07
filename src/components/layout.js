@@ -8,14 +8,13 @@ import '../../content/assets/scss/main.scss'
 
 const Layout = (props) => {
 
-  const { location, title, children } = props
-  const rootPath = `${__PATH_PREFIX__}/`
-
-  let hideMenu = location ? location.pathname === rootPath : false;
+  const { location, title, children, menuHidden } = props
+  // const rootPath = `${__PATH_PREFIX__}/`
+  // let hideMenu = location ? location.pathname === rootPath : false;
 
   return (
     <React.Fragment>
-        <MainNav ref={props.mainNavRef} hidden={hideMenu} />
+        <MainNav ref={props.mainMenuRef} hidden={menuHidden} />
 
         <main>{children}</main>
 

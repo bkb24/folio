@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from "react"
-import { Link, graphql } from "gatsby"
+import React, { useRef, useEffect, useState } from "react"
+import { graphql } from "gatsby"
 
 // import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -13,23 +13,28 @@ import Skills from '../components/skills'
 import Contact from '../components/contact'
 
 const Index = (props) => {
+  const [menuHidden, setMenuHidden] = useState(true);
 
   useEffect(() => {
     toggleMainNav();
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("resize", handleResize);
     }
-  }, [])
+  }, []);
 
   const { data } = props;
   const siteTitle = data.site.siteMetadata.title;
 
-  let mainNavRef = useRef()
+  let mainMenuRef = useRef()
   let sideNavRef = useRef()
 
-  const handleScroll = (event) => {
+  const handleScroll = () => {
+    if (!window.matchMedia('(min-width: 1025px)').matches) return;
+
     let sideMenuItems = Array.from(sideNavRef.current.children);
 
     toggleMainNav();
@@ -49,26 +54,37 @@ const Index = (props) => {
     });
   }
 
+  const handleResize = () => {
+    if (window.matchMedia('(min-width: 1025px)').matches) {
+      setMenuHidden(true)
+    } else {
+      setMenuHidden(false)
+    }
+  }
+
   const moveMenu = (index) => {
     let len = 0;
-    let arr = Array.from(mainNavRef.current.children[0].children);
+    let arr = Array.from(mainMenuRef.current.children);
 
     arr.forEach((item, i) => {
-        if (i > index) return;
-        len += item.offsetWidth;
+      if (i > index) return;
+      len += item.offsetWidth;
     });
-    mainNavRef.current.children[0].style.transform = `translateX(${mainNavRef.current.children[0].offsetWidth - len}px)`;
+    mainMenuRef.current.style.transform =
+      `translateX(${mainMenuRef.current.offsetWidth - len}px)`;
   }
 
   const toggleMainNav = () => {
+    if (!window.matchMedia('(min-width: 1025px)').matches) return setMenuHidden(false);
+
     window.scrollY + 100 > sideNavRef.current.offsetTop ?
-      mainNavRef.current.classList.remove('hidden') :
-      mainNavRef.current.classList.add('hidden');
+      mainMenuRef.current.parentElement.classList.remove('hidden') :
+      mainMenuRef.current.parentElement.classList.add('hidden');
   }
 
   return (
     <div className="index-page">
-      <Layout location={props.location} title={siteTitle} mainNavRef={mainNavRef}>
+      <Layout location={props.location} title={siteTitle} mainMenuRef={mainMenuRef} menuHidden={menuHidden}>
         <Hero sideNavRef={sideNavRef} />
         <Folio />
         <Services />
