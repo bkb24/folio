@@ -1,5 +1,7 @@
 .contact-section {
-    margin-top: 5rem;
+    @include breakpoint-up(m) {
+        margin-top: 5rem;
+    }
 }
 
 .contact-line {
@@ -56,8 +58,13 @@
     }
 
     &:before {
-        top: 0;
-        transform: translateY(-50%) skewY(-1deg);
+        display: none;
+
+        @include breakpoint-up(m) {
+            display: block;
+            top: 0;
+            transform: translateY(-50%) skewY(-1deg);
+        }
     }
 
     &:after {

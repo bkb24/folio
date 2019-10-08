@@ -16,10 +16,14 @@ const Hero = (props) => {
         { name: 'Skills',   component: Skills,      to: '/skills' },
         { name: 'Contact',  component: Contact,     to: '/contact' }
     ]);
-    let [activeScreen, setActiveScreen] = useState('Welcome')
+    let [activeScreen, setActiveScreen] = useState('Welcome');
+
+    let heightStyle = props.isMobile ? { height: props.height } : {};
+
+    console.log('props.height', props.height)
 
     return (
-        <div className="hero">
+        <div className="hero" style={heightStyle}>
             <SideMenu ref={props.sideNavRef}>
                 {
                     menuItems.map((item, i) => {

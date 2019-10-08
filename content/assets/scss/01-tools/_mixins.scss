@@ -110,17 +110,21 @@
     z-index: z-index($level);
 }
 
-@mixin svg-icon($size: null) {
+@mixin svg-icon($size: null, $fillColor: null) {
     $resolvedSize: if($size == null, var('icon', 'size'), $size);
+    $resolvedFillColor: if($fillColor == null, get-color('primary'), $fillColor);
 
     @include size($resolvedSize);
-    fill: get-color('primary');
+    fill: $resolvedFillColor;
 }
 
-@mixin svg-icon-outline() {
-    @include size(var('icon', 'size'));
+@mixin svg-icon-outline($size: null, $outlineColor: null) {
+    $resolvedSize: if($size == null, var('icon', 'size'), $size);
+    $resolvedOutlineColor: if($outlineColor == null, get-color('primary'), $outlineColor);
+
+    @include size($resolvedSize);
     fill: none;
-    stroke: get-color('primary');
+    stroke: $resolvedOutlineColor;
 }
 
 @mixin project-bg($reverse: false) {

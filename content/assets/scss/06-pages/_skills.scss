@@ -1,6 +1,10 @@
 .skills-section {
     position: relative;
-    margin-top: 8rem;
+    margin-top: 2rem;
+
+    @include breakpoint-up(m) {
+        margin-top: 8rem;
+    }
 }
 
 .skills-icon {
@@ -83,7 +87,11 @@
 .skills-component {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 3.5rem;
+    margin-bottom: 1.5rem;
+
+    @include breakpoint-up(m) {
+        margin-bottom: 3.5rem;
+    }
 }
 
 .skills-component > li {
@@ -108,18 +116,16 @@
     display: flex;
     flex-wrap: wrap;
     flex: 2;
-
-    @include breakpoint-up(m) {
-        order: 2;
-    }
-    /* align-content: flex-start; */
+    order: 2;
 }
 
 .skills-general {
+    display: none;
     width: 100%;
     margin-bottom: 1.5rem;
 
     @include breakpoint-up(m) {
+        display: block;
         margin-bottom: 3rem;
     }
 }
@@ -143,17 +149,17 @@
 .skills-item {
     width: 100%;
 
-    padding: 2rem;
-    padding-bottom: 2.5rem;
+    padding: 1.5rem;
     font-family: 'Lato', sans-serif;
-    /* box-shadow: 0 0 20px rgba(0, 0, 0, .1); */
-    background: rgba(255, 255, 255, .7);
-    margin-bottom: 2rem;
+    background: #fff;
+    margin-bottom: 1rem;
     border-radius: 10px;
-    /* flex: 1; */
 
     @include breakpoint-up(xs) {
         width: calc(50% - 1rem);
+        padding: 2rem;
+        padding-bottom: 2.5rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -201,7 +207,7 @@
     top: 5%;
     left: 5%;
     width: 40%;
-    height: 40%;
+    padding-top: 40%;
     border-radius: 50%;
     z-index: -1;
     background: linear-gradient(-110deg, rgb(0, 179, 202) 0%, rgb(0, 90, 102) 100%);
@@ -210,9 +216,11 @@
 
 .skills-graphic img {
     display: block;
-    width: 100%;
+    width: 80%;
+    margin: 1rem;
 
     @include breakpoint-up(xs) {
+        margin: 0;
         width: 20rem;
     }
 

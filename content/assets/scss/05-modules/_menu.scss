@@ -44,6 +44,8 @@ $main-menu-height: rem(70);
 
     @include z-index(6);
 
+    // transform: translateY(-100%);
+
     @include breakpoint-up(m) {
         display: none;
     }

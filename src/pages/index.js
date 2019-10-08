@@ -14,9 +14,11 @@ import Contact from '../components/contact'
 
 const Index = (props) => {
   const [menuHidden, setMenuHidden] = useState(true);
+  const [winHeight, setWinHeight] = useState(null);
 
   useEffect(() => {
     toggleMainNav();
+    setWinHeight(window.outerHeight);
     window.addEventListener('scroll', handleScroll);
     window.addEventListener("resize", handleResize);
 
@@ -55,6 +57,8 @@ const Index = (props) => {
   }
 
   const handleResize = () => {
+    setWinHeight(window.outerHeight);
+
     if (window.matchMedia('(min-width: 1025px)').matches) {
       setMenuHidden(true)
     } else {
@@ -85,7 +89,7 @@ const Index = (props) => {
   return (
     <div className="index-page">
       <Layout location={props.location} title={siteTitle} mainMenuRef={mainMenuRef} menuHidden={menuHidden}>
-        <Hero sideNavRef={sideNavRef} />
+        <Hero height={winHeight} isMobile={!menuHidden} sideNavRef={sideNavRef} />
         <Folio />
         <Services />
         <Skills />
