@@ -6,7 +6,7 @@ import ServicesComponent from "../components/services";
 class Services extends Component {
     render() {
         return (
-            <Layout>
+            <Layout cssClass="services-page">
                 <ServicesComponent />
             </Layout>
         )

@@ -58,13 +58,8 @@
     }
 
     &:before {
-        display: none;
-
-        @include breakpoint-up(m) {
-            display: block;
-            top: 0;
-            transform: translateY(-50%) skewY(-1deg);
-        }
+        top: 0;
+        transform: translateY(-50%) skewY(-1deg);
     }
 
     &:after {
@@ -74,6 +69,16 @@
 
     @include breakpoint-up(m) {
         padding: 4rem 0 5rem;
+    }
+}
+
+.contact-page {
+    .contact-head:before {
+        display: none;
+
+        @include breakpoint-up(m) {
+            display: block;
+        }
     }
 }
 

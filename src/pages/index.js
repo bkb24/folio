@@ -87,15 +87,19 @@ const Index = (props) => {
   }
 
   return (
-    <div className="index-page">
-      <Layout location={props.location} title={siteTitle} mainMenuRef={mainMenuRef} menuHidden={menuHidden}>
+      <Layout
+        cssClass="index-page"
+        location={props.location}
+        title={siteTitle}
+        mainMenuRef={mainMenuRef}
+        menuHidden={menuHidden}
+      >
         <Hero height={winHeight} isMobile={!menuHidden} sideNavRef={sideNavRef} />
         <Folio />
         <Services />
         <Skills />
         <Contact />
       </Layout>
-    </div>
   )
 };
 

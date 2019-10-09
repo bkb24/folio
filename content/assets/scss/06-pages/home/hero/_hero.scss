@@ -1,7 +1,8 @@
 .hero {
-    height: 100vh;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+
     position: relative;
     overflow: hidden;
 
@@ -39,6 +40,13 @@
     &:after {
         background: linear-gradient(transparent 50%, #fff 100%);
         z-index: -2;
+    }
+
+    @include breakpoint-up(m) {
+        flex-direction: row;
+        justify-content: initial;
+
+        height: 100vh;
     }
 }
 

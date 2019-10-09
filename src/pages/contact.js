@@ -6,7 +6,7 @@ import ContactComponent from "../components/contact";
 class Contact extends Component {
     render() {
         return (
-            <Layout>
+            <Layout cssClass="contact-page">
                 <ContactComponent />
             </Layout>
         )

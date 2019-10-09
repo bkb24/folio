@@ -13,10 +13,10 @@ const Layout = (props) => {
   // let hideMenu = location ? location.pathname === rootPath : false;
 
   return (
-    <React.Fragment>
+    <>
         <MainNav ref={props.mainMenuRef} hidden={menuHidden} />
 
-        <main>{children}</main>
+        <main className={props.cssClass}>{children}</main>
 
         <footer className="main-footer">
           <div className="footer-start">
@@ -29,7 +29,7 @@ const Layout = (props) => {
               </div>
           </div>
         </footer>
-      </React.Fragment>
+      </>
   )
 }
 

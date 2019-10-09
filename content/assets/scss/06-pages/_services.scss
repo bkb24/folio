@@ -3,7 +3,7 @@
     color: #fff;
     background: linear-gradient(-110deg, rgb(0, 179, 202) 0%, rgb(0, 90, 102) 100%);
 
-    padding: 3rem 0 5rem;
+    padding: 3rem 1rem 5rem 1rem;
 
     @include breakpoint-up(m) {
         margin-top: 2rem;
@@ -23,12 +23,17 @@
 }
 
 .services-head:before {
-    display: none;
+    top: 0;
+    transform: translateY(-50%) skewY(-1deg);
+}
 
-    @include breakpoint-up(m) {
-        display: block;
-        top: 0;
-        transform: translateY(-50%) skewY(-1deg);
+.services-page {
+    .services-head:before {
+        display: none;
+
+        @include breakpoint-up(m) {
+            display: block;
+        }
     }
 }
 
@@ -70,8 +75,6 @@
 .services-section .subhero h2 {
     font-family: 'Lato', sans-serif;
     text-align: center;
-    /* margin-top: 1rem; */
-    font-size: 3rem;
     color: rgb(133, 0, 115);
     font-size: 1.5rem;
 
@@ -108,9 +111,9 @@
 }
 
 .services-wrap {
+    display: flex;
     width: 90%;
     margin: auto;
-    display: flex;
     flex-wrap: wrap;
     position: relative;
     align-items: flex-start;
@@ -120,15 +123,6 @@
         padding: 1rem;
     }
 }
-
-/* .services-wrap:after {
-    content: '';
-    position: absolute;
-    height: 146px;
-    width: 146px;
-    top: 0;
-    background: red;
-} */
 
 .services-welcome {
     display: block;
@@ -162,7 +156,6 @@
     border-left: 1rem solid transparent;
     border-right: 1rem solid transparent;
     border-top: .5rem solid rgb(218, 50, 139);
-    /* border-top: .5rem solid rgb(0, 135, 153); */
     width: 1px;
     height: 1px;
 }
@@ -173,6 +166,7 @@
     font-family: 'Open sans', 'sans-serif';
     font-weight: 600;
     color: get-color('text');
+    margin-top: 2rem;
 
     @include breakpoint-up(m) {
         width: auto;
@@ -182,7 +176,6 @@
         flex: 1;
 
         padding-left: 2rem;
-        margin-top: 2rem;
         margin-right: 2rem;
 
         font-size: 1.125rem;
@@ -246,10 +239,12 @@
 }
 
 .services-content {
+    display: none;
     flex: 2;
     padding-top: 2rem;
 
     @include breakpoint-up(m) {
+        display: block;
         padding-top: 3.5rem;
         padding-left: 2rem;
     }
@@ -325,9 +320,11 @@
     background: linear-gradient(-110deg, rgb(0, 179, 202) 0%, rgb(0, 90, 102) 100%);
     position: relative;
     padding: 2.5rem 5% 2rem 5%;
+    margin-top: 2rem;
 
     @include breakpoint-up(m) {
         padding: 5.5rem 0 5rem;
+        margin-top: 0;
     }
 }
 
