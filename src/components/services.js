@@ -22,6 +22,7 @@ const Services = () => {
         let servicesMenuItems = Array
             .from(servicesContentRef.current.children)
             .map(item => item.children[0]);
+
         let servicesSideMenuItems = Array.from(servicesSideMenuRef.current.children);
 
         if (servicesOffsetTop > fromTop) return;
@@ -41,17 +42,18 @@ const Services = () => {
         })
     }
 
-// servicesNav.addEventListener('click', e => {
-//     let name = e.target.dataset.name ? e.target.dataset.name : e.target.parentElement.dataset.name;
-//     let servicesOffsetTop = servicesWrap.offsetTop;
+    const handleClick = e => {
+        let name = e.target.dataset.name ? e.target.dataset.name : e.target.parentElement.dataset.name;
+        let servicesOffsetTop = servicesWrapRef.current.offsetTop;
+        let itemOffsetTop = document.querySelector(`.services-item-heading[data-name="${name}"]`).offsetTop;
 
-//     servicesNavItems.forEach(item => {
-//         if (item.dataset.name == name) {
-//             let itemOffsetTop = document.querySelector(`.services-item-heading[data-name="${name}"]`).offsetTop;
-//             window.scrollTo(0, servicesOffsetTop + itemOffsetTop - 100);
-//         }
-//     })
-// });
+        // Animate to section
+        window.scrollTo({
+            top: servicesOffsetTop + itemOffsetTop - 100,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
 
     return (
         <section className="services-section">
@@ -79,7 +81,7 @@ const Services = () => {
                     Here it is. Contact me if I can help you
                 </h2>
 
-                <ul className="services-overview" ref={servicesSideMenuRef}>
+                <ul className="services-overview" ref={servicesSideMenuRef} onClick={handleClick}>
                     <li data-name="new-website">
                         <svg viewBox="0 0 20 20">
                             <path d="M1 5 L10 13 L18 5" />
