@@ -30,3 +30,14 @@
         transform: translateY(-9%);
     }
 }
+
+// Styles for buttons in section ending
+.section-cta {
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.section-cta-btn {
+    @include btn-bounce;
+}

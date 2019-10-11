@@ -8,8 +8,8 @@ import Layout from "../components/layout"
 
 import Hero from "../components/hero/hero"
 import Folio from '../components/folio'
-import Services from '../components/services'
-import Skills from '../components/skills'
+import Services from '../components/home/services'
+import Skills from '../components/home/skills'
 import Contact from '../components/contact'
 
 const Index = (props) => {
@@ -96,6 +96,8 @@ const Index = (props) => {
       >
         <Hero height={winHeight} isMobile={!menuHidden} sideNavRef={sideNavRef} />
         <Folio />
+
+
         <Services />
         <Skills />
         <Contact />

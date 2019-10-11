@@ -1,0 +1,100 @@
+$section-head: (
+    mobile: (
+        p: 3rem 0,
+        heading-fs: 2.5rem
+    ),
+    desktop: (
+        p: 4rem 0 5rem,
+        heading-fs: 3rem
+    ),
+
+    icon: (
+        size: 5rem
+    )
+);
+
+@mixin section-head-tilted($tilt-top: true, $mobile-p: null, $desktop-p: null) {
+    $mp: if($mobile-p == null, map-deep-get($section-head, 'mobile', 'p'), $mobile-p);
+    $dp: if($desktop-p == null, map-deep-get($section-head, 'desktop', 'p'), $desktop-p);
+
+    position: relative;
+    padding: $mp;
+    color: #fff;
+    background: var('gradient', 'primary');
+
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+
+        position: absolute;
+        left: 0;
+
+        width: 100%;
+        height: 10%;
+
+        background: #fff;
+    }
+
+    &:before {
+        top: 0;
+        transform: translateY(-50%) skewY(-1deg);
+    }
+
+    @if $tilt-top {
+        &:after {
+            bottom: 0;
+            transform: translateY(50%) skewY(-1deg);
+        }
+    } @else {
+        &:after { display: none }
+    }
+}
+
+.section-head-tilted {
+    @include section-head-tilted;
+}
+
+.section-head-tilted-bottom {
+    @include section-head-tilted(false);
+}
+
+.section-heading {
+    margin-bottom: .5rem;
+
+    font-size: map-deep-get($section-head, 'mobile', 'heading-fs');
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    text-align: center;
+
+    @include breakpoint-up(m) {
+        font-size: map-deep-get($section-head, 'desktop', 'heading-fs');
+    }
+}
+
+.section-subheading  {
+    margin: auto;
+
+    font-size: .85rem;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    color: #f1f1f1;
+
+    br {
+        display: none;
+    }
+
+    @include breakpoint-up(m) {
+        br {
+            display: block;
+        }
+    }
+}
+
+.section-main-icon-wrap {
+    text-align: center;
+}
+
+.section-main-icon {
+    @include size(map-deep-get($section-head, 'icon', 'size'));
+}

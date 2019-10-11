@@ -1,0 +1,115 @@
+.skills-section-home {
+    padding: 2rem 0 0;
+    text-align: center;
+
+    @include breakpoint-up(m) {
+        padding: 3rem 0 0;
+    }
+}
+
+.skills-home-content {
+    position: relative;
+}
+
+.skills-home-content {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.skills-home-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .skills-component-heading {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+
+.section-heading-skills-home,
+.section-subheading-skills-home {
+    color: get-color('primary');
+}
+
+.skills-home-heading {
+    margin-bottom: 1rem;
+
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: get-color('secondary-dark');
+
+    @include breakpoint-up(m) {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+}
+
+.skills-graphic.skills-graphic-home {
+    @include size(10rem);
+    margin: auto;
+    order: 0;
+}
+
+.skill-items-home {
+    flex-grow: 1;
+    padding: 1rem;
+    background: #fff;
+    background: rgba(get-color('primary'), .05);
+    // color: #fff;
+    border-radius: 10px;
+    margin: auto;
+    // box-shadow: 0 0 20px rgba(#000, .07);
+
+    &:hover {
+        // box-shadow: 0 0 20px rgba(#000, .15);
+        cursor: pointer;
+    }
+
+    @include breakpoint-up(m) {
+        width: 90%;
+        padding: 2rem;
+    }
+}
+
+.skill-items-list-home {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.skill-main-item {
+    font-weight: 600;
+    margin-bottom: .125rem;
+}
+
+.section-cta-home-skills {
+    margin: auto;
+    margin-top: 0;
+    width: 90%;
+    text-align: center;
+
+    a {
+        display: inline-block;
+        width: 48%;
+    }
+
+    a:first-child {
+        margin-right: 4%;
+    }
+
+    @include breakpoint-up(m) {
+        margin-top: 2rem;
+
+        a {
+            display: inline;
+            width: auto;
+        }
+
+        a:first-child {
+            margin-right: 1rem;
+        }
+    }
+}

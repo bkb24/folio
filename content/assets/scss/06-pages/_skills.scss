@@ -30,7 +30,6 @@
 .skills-section h5 {
     text-align: center;
     font-family: 'Lato', sans-serif;
-    /* font-weight: 900; */
     margin-bottom: 2rem;
     color: get-color('primary');
 
@@ -54,34 +53,15 @@
     top: 0;
     bottom: 0;
     right: 0;
-    /* background: linear-gradient(90deg, transparent 0%, rgba(244, 165, 255, 0.07) 100%); */
     background: linear-gradient(90deg, rgba(0, 179, 202, .1) 0%, rgba(244, 165, 255, 0.1) 100%);
     z-index: -2;
-}
 
-.skills-content:before,
-.skills-content:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    left: 0;
-    /* background: ; */
-    width: 100%;
-    height: 10rem;
-}
+    @include fade-y;
 
-.skills-content:before {
-    top: 0;
-    background: linear-gradient(#fff 0%, transparent 100%);
-}
-
-.skills-content:after {
-    background: linear-gradient(transparent 0%, #fff 100%);
-    bottom: 0;
-}
-
-.skills-backend {
-    /* position: relative; */
+    &:before,
+    &:after {
+        z-index: -1;
+    }
 }
 
 .skills-component {
@@ -92,10 +72,6 @@
     @include breakpoint-up(m) {
         margin-bottom: 3.5rem;
     }
-}
-
-.skills-component > li {
-    /* list-style: none; */
 }
 
 .skills-component-heading {
@@ -120,7 +96,6 @@
 }
 
 .skills-general {
-    display: none;
     width: 100%;
     margin-bottom: 1.5rem;
 
@@ -240,10 +215,6 @@
         margin-left: 3rem;
         order: 2;
     }
-}
-
-.skills-backend .skills-component-heading {
-    /* text-align: right; */
 }
 
 .skills-other .skills-component-heading {

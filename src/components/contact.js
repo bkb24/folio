@@ -20,14 +20,14 @@ const Contact = () => {
 
     return (
         <section className="contact-section">
-            <div className="contact-head">
-                <div className="contact-icon">
-                    <svg>
+            <div className="section-head-tilted">
+                <div className="section-main-icon-wrap">
+                    <svg className="section-main-icon contact-section-main-icon">>
                         <use href={`${icons}#envelope`} />
                     </svg>
                 </div>
-                <h3 className="">Contact</h3>
-                <h5>
+                <h3 className="section-heading">Contact</h3>
+                <h5 className="section-subheading">
                     If you want to work with me shoot me a message below
                     <br /> or find me on social
                 </h5>

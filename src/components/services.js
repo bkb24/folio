@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { Link } from 'gatsby'
 
+import SectionButton from './partials/section-cta-btn'
 import icons from '../../content/assets/img/sprite.svg'
 
 const Services = () => {
@@ -338,9 +339,11 @@ const Services = () => {
                 </ul>
             </div>
 
+            <SectionButton target="/contact" label="Contact" />
+{/*
             <div className="services-contact-cta txt-align-center">
                 <Link className="services-contact-btn" to={`/contact`}>Contact</Link>
-            </div>
+            </div> */}
 
         </section>
     )
