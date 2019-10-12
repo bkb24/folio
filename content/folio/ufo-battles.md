@@ -18,6 +18,9 @@ tech:
 screens:
   - screen: /img/uploads/ufo-battles.herokuapp.com_.png
   - screen: /img/uploads/ufo-battles.herokuapp.com_tutorial_duel_test1.png
+work:
+  - work: Design
+  - work: Development
 partners:
   - name: Dimitar Lubchev
     social:
