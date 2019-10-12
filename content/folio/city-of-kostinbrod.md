@@ -1,0 +1,30 @@
+---
+type: project
+title: City of Kostinbrod
+url: 'https://kostinbrod.netlify.com'
+code: 'https://github.com/bkb24/city-of-kostinbrod-vue'
+description: >-
+  A small web project dedicated to the Bulgarian city of Kostinbrod. I made it
+  for a contest for the city's anniversary. The task was to make something about
+  the city weather it is about the history or the present day or anything that
+  is related to it and the city area. I made it both in Bulgarian and English.
+main-img-d: /img/uploads/kostinbrod.jpg
+main-img-m: /img/uploads/kostinbrod-m.jpg
+tech:
+  - Vue
+  - vue-i18n
+  - Webpack
+  - SCSS
+  - SVG
+  - HTML
+  - CSS
+  - Photoshop
+screens:
+  - screen: /img/uploads/kostinbrod.jpg
+  - screen: /img/uploads/kostinbrod-screen.png
+work:
+  - work: Author/Idea
+  - work: Design
+  - work: Development
+---
+
