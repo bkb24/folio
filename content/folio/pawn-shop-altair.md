@@ -20,9 +20,13 @@ tech:
   - Woocommerce
   - HTML
   - CSS
-  - SEO
+  - SCSS
 screens:
   - screen: /img/uploads/zkaltair.com_1.jpg
   - screen: /img/uploads/zkaltair.com-m.jpg
+work:
+  - work: Design
+  - work: Development
+  - work: SEO
 ---
 
