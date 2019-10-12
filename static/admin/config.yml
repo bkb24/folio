@@ -41,6 +41,12 @@ collections:
         widget: "list"
         fields:
           - { label: "Image", name: "screen", widget: "image" }
+      - name: "work"
+        label: "My work"
+        widget: "list"
+        optional: true
+        fields:
+          - { label: "Work", name: "work", widget: "string" }
       - name: "partners"
         label: "Partners"
         label_singular: "Partner"
