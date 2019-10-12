@@ -113,6 +113,31 @@ $main-menu-height: rem(70);
             transform: translateY(-100%);
             opacity: 0;
         }
+
+        &.main-nav-no-bg {
+            background: none;
+            transition: all .2s ease-in-out;
+
+            .main-menu-link {
+                color: #fff;
+
+                &:hover {
+                    background: none;
+                    border-bottom: 2px solid #fff;
+                }
+            }
+
+            .main-nav-social {
+                svg {
+                    fill: #fff;
+                }
+
+                .resume {
+                    color: get-color('primary');
+                    background: #fff;
+                }
+            }
+        }
     }
 }
 

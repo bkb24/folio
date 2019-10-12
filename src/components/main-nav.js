@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from "gatsby"
 
 import icons from '../../content/assets/img/sprite.svg'
@@ -9,7 +9,7 @@ const MainNav = React.forwardRef((props, ref) => (
 
         <label className="main-menu-toggler" htmlFor="menu-toggler"></label>
 
-        <nav className={`main-nav${props.hidden ? ' hidden' : ''}`}>
+        <nav className={`main-nav ${props.hidden ? 'hidden' : props.transparent ? 'main-nav-no-bg' : '' }`}>
             <ul className="main-menu" ref={ref} style={{
                 transform: props.hidden ? `translateX(100%)` : ``
             }}>

@@ -7,6 +7,8 @@
     @include breakpoint-up(m) {
         margin-top: 8rem;
     }
+
+    color: get-color('primary');
 }
 
 .projects-heading {
@@ -16,7 +18,7 @@
     font-family: 'Lato', sans-serif;
     font-weight: 900;
     text-align: center;
-    color: get-color('primary');
+    // color: get-color('primary');
 
     @include breakpoint-up(m) {
         font-size: 3rem;
@@ -31,7 +33,7 @@
 
     font-family: 'Lato', sans-serif;
     text-align: center;
-    color: get-color('primary');
+    // color: get-color('primary');
 
     @include breakpoint-up(m) {
         width: 100%;
@@ -48,4 +50,22 @@
 
 .home-goto-projects {
     @include btn-bounce;
+}
+
+// Only for /folio page
+.folio-page {
+
+    .folio-section {
+        margin-top: 0;
+        color: #fff;
+    }
+
+    .section-head-folio {
+        @include section-head-tilted(false);
+        padding: 4rem 0 3rem;
+
+        @include breakpoint-up(m) {
+            padding: 7rem 0 4rem;
+        }
+    }
 }

@@ -4,6 +4,8 @@
     .section-head-tilted-bottom {
         margin-bottom: 2rem;
 
+        padding-bottom: 5rem;
+
         @include breakpoint-up(m) {
             padding-top: 7rem;
             padding-bottom: 7rem;
@@ -219,26 +221,42 @@
     }
 }
 
-.skills-other .skills-component-heading {
-    text-align: center;
-}
-
 .skills-other {
     justify-content: space-between;
-}
 
-.skills-other .skills-item {
-    margin-bottom: 1rem;
-
-    @include breakpoint-up(xs) {
-        width: calc(50% - 1rem);
+    .skills-component-heading {
+        text-align: center;
+        margin-bottom: 0;
     }
 
-    @include breakpoint-up(m) {
-        width: 24%;
-        margin: 0;
+    .skills-graphic {
+        order: 0;
+
+        @include breakpoint-up(m) {
+            order: 0;
+            width: 100%;
+            text-align: center;
+
+            img {
+                @include size(25rem);
+            }
+        }
+    }
+
+    .skills-item {
+        margin-bottom: 1rem;
+
+        @include breakpoint-up(xs) {
+            width: calc(50% - 1rem);
+        }
+
+        @include breakpoint-up(m) {
+            width: 24%;
+            margin: 0;
+        }
     }
 }
+
 
 .skills-resume-btn {
     margin: auto;

@@ -2,6 +2,7 @@ import React from 'react'
 
 import backEndImg from '../../content/assets/img/back-end.svg'
 import fronEndImg from '../../content/assets/img/fron-end.svg'
+import otherSkillsImg from '../../content/assets/img/other-skills.svg'
 
 const Skills = () => {
     return (
@@ -149,6 +150,11 @@ const Skills = () => {
 
                 <div className="skills-component skills-other">
                     <h3 className="skills-component-heading">Other relevant skills</h3>
+
+                    <div className="skills-graphic">
+                        <img src={otherSkillsImg} alt="other relevant skills" />
+                    </div>
+
                     <div className="skills-item">
                         <h3>Version control</h3>
                         <ul>

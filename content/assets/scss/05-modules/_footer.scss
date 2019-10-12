@@ -1,0 +1,77 @@
+// Footer styles
+.main-footer {
+    display: flex;
+    overflow: hidden;
+
+    margin-top: 3rem;
+
+    @include breakpoint-up(m) {
+        margin-top: 7rem;
+    }
+
+    font-family: 'Lato', sans-serif;
+    font-size: .75rem;
+    font-weight: 600;
+    color: get-color('primary');
+}
+
+.footer-start {
+    display: flex;
+    @include flex-center;
+    padding-left: 1.25rem;
+
+    text-align: right;
+    color: get-color('primary');
+}
+
+.footer-shape {
+    @include size(1.75rem);
+
+    margin-right: 1.25rem;
+
+    transform: skewX(-20deg);
+    background: get-color('secondary-light');
+
+    border-radius: 10px;
+}
+
+.footer-big-shape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include size(2.25rem);
+    background: var('gradient', 'primary-color');
+
+    cursor: pointer;
+
+    svg {
+        @include size(1rem);
+        fill: none;
+        stroke: #fff;
+        stroke-width: 3;
+        transform: rotateX(180deg) skewX(-20deg);
+    }
+}
+
+.footer-other {
+    flex-grow: 1;
+
+    transform: skewX(-20deg);
+
+    padding: 1rem;
+    margin-right: -2rem;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    background: var('gradient', 'mixed');
+
+    color: #fff;
+}
+
+.footer-content {
+    transform: skewX(20deg);
+    text-align: right;
+    padding-right: 3rem;
+}

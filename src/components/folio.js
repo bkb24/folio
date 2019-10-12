@@ -6,10 +6,12 @@ import icons from '../../content/assets/img/sprite.svg'
 const Folio = () => {
     return (
         <section className="folio-section">
-            <h2 className="projects-heading">Projects</h2>
-            <h5 className="projects-subheading">
-                Here is some of my most notable work. Go to <Link to={'/folio'}>all</Link>
-            </h5>
+             <div className="section-head-folio">
+                <h2 className="projects-heading">Projects</h2>
+                <h5 className="projects-subheading">
+                    Here is some of my most notable work
+                </h5>
+            </div>
 
             <div className="project-item">
                 <div className="project-img-wrap">

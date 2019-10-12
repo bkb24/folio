@@ -26,6 +26,8 @@ const Services = () => {
             </div>
 
             <div className="services-home-content">
+                <h3 className="services-home-check">Check it out!</h3>
+
                 <ul className="services-home-list">
                     <li className="services-list-item">
                         <div className="services-item-title">Creating a new website</div>

@@ -38,6 +38,12 @@
     color: get-color('primary');
 }
 
+.section-subheading-skills-home {
+    @include breakpoint-up(m) {
+        margin-bottom: 2.5rem;
+    }
+}
+
 .skills-home-heading {
     margin-bottom: 1rem;
 
@@ -67,6 +73,7 @@
 }
 
 .skill-items-home {
+    width: 100%;
     flex-grow: 1;
     padding: 1rem;
     background: #fff;

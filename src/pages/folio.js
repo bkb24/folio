@@ -6,7 +6,7 @@ import FolioComponent from "../components/folio";
 class Folio extends Component {
     render() {
         return (
-            <Layout>
+            <Layout cssClass="folio-page">
                 <FolioComponent />
             </Layout>
         )
