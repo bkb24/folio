@@ -27,6 +27,7 @@ collections:
     editor:
       preview: false
     fields:
+      - { label: "Type", name: "type", widget: "string", default: "project", optional: true }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "URL", name: "url", widget: "string" }
       - { label: "Code URL", name: "code", widget: "string", optional: true }
@@ -36,6 +37,16 @@ collections:
       - { label: "Technologies", name: "tech", widget: "list" }
       - name: "screens"
         label: "Screens"
+        label_singular: "Screen"
         widget: "list"
         fields:
           - { label: "Image", name: "screen", widget: "image" }
+      - name: "partners"
+        label: "Partners"
+        label_singular: "Partner"
+        widget: "list"
+        optional: true
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Work", name: "work", widget: "string" }
+          - { label: "Social", name: "social", widget: "list", fields: [{ label: "Social name", name: "social_name", widget: "string" }, { label: "URL", name: "url", widget: "string" }] }
