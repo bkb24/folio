@@ -1,9 +1,14 @@
 .skills-section {
     position: relative;
-    margin-top: 2rem;
 
-    @include breakpoint-up(m) {
-        margin-top: 8rem;
+    .section-head-tilted-bottom {
+        margin-bottom: 2rem;
+
+        @include breakpoint-up(m) {
+            padding-top: 7rem;
+            padding-bottom: 7rem;
+            margin-bottom: 4rem;
+        }
     }
 }
 
@@ -30,11 +35,8 @@
 .skills-section h5 {
     text-align: center;
     font-family: 'Lato', sans-serif;
-    margin-bottom: 2rem;
-    color: get-color('primary');
 
     @include breakpoint-up(m) {
-        margin-bottom: 5rem;
     }
 }
 

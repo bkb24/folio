@@ -36,18 +36,18 @@ $section-head: (
         background: #fff;
     }
 
-    &:before {
-        top: 0;
-        transform: translateY(-50%) skewY(-1deg);
+    &:after {
+        bottom: 0;
+        transform: translateY(50%) skewY(-1deg);
     }
 
     @if $tilt-top {
-        &:after {
-            bottom: 0;
-            transform: translateY(50%) skewY(-1deg);
+        &:before {
+            top: 0;
+            transform: translateY(-50%) skewY(-1deg);
         }
     } @else {
-        &:after { display: none }
+        &:before { display: none }
     }
 }
 

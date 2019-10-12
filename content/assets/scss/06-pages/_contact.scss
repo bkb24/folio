@@ -1,6 +1,27 @@
+.contact-page {
+    .contact-section {
+        margin-top: 0;
+    }
+
+    .section-head-tilted-contact:before {
+        display: none;
+    }
+
+    @include breakpoint-up(m) {
+        .section-head-tilted-contact {
+            padding-top: 7rem;
+            padding-bottom: 5rem;
+        }
+    }
+}
+
 .contact-section {
     @include breakpoint-up(m) {
         margin-top: 5rem;
+    }
+
+    .section-subheading {
+        width: 90%;
     }
 }
 

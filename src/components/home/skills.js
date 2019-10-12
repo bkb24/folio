@@ -19,7 +19,7 @@ const Skills = () => {
 
                 <div className="skills-home-section skills-home-backend">
 
-                    <div className="skills-graphic skills-graphic-home">
+                    <div className="skills-graphic-home">
                         <img src={backEndImg} alt="back end development" />
                     </div>
 
@@ -36,7 +36,7 @@ const Skills = () => {
 
                 <div className="skills-home-section skills-home-frontend">
 
-                    <div className="skills-graphic skills-graphic-home">
+                    <div className="skills-graphic-home">
                         <img src={fronEndImg} alt="front end development" />
                     </div>
 
@@ -52,7 +52,7 @@ const Skills = () => {
 
                 <div className="skills-home-section skills-home-other">
 
-                    <div className="skills-graphic skills-graphic-home">
+                    <div className="skills-graphic-home">
                         <img src={otherSkillsImg} alt="front end development" />
                     </div>
 

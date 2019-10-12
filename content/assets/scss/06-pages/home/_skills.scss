@@ -18,7 +18,7 @@
 }
 
 .skills-home-section {
-    flex: 1;
+    flex: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -26,6 +26,10 @@
     .skills-component-heading {
         text-align: center;
         margin-bottom: 1rem;
+    }
+
+    @include breakpoint-up(m) {
+        flex: 1;
     }
 }
 
@@ -47,10 +51,19 @@
     }
 }
 
-.skills-graphic.skills-graphic-home {
+.skills-graphic-home {
+    order: 0;
     @include size(10rem);
     margin: auto;
-    order: 0;
+    margin-top: 2rem;
+
+    img {
+        width: 100%;
+    }
+
+    @include breakpoint-up(m) {
+        margin-top: 0;
+    }
 }
 
 .skill-items-home {

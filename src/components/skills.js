@@ -6,9 +6,11 @@ import fronEndImg from '../../content/assets/img/fron-end.svg'
 const Skills = () => {
     return (
         <section className="skills-section">
-            <div className="skills-icon">{`{ ... }`}</div>
-            <h2>Skills</h2>
-            <h5>My most used arsenal for development</h5>
+            <div className="section-head-tilted-bottom">
+                <div className="skills-icon">{`{ ... }`}</div>
+                <h1 className="section-heading">Skills</h1>
+                <h5 className="section-subheading">My most used arsenal for development</h5>
+            </div>
 
             <div className="skills-content">
 
