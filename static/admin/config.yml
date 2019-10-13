@@ -35,6 +35,7 @@ collections:
       - { label: "Desktop shot", name: "main-img-d", widget: "image" }
       - { label: "Mobile shot", name: "main-img-m", widget: "image" }
       - { label: "Technologies", name: "tech", widget: "list" }
+      - { label: "Show on home", name: "show_on_home", widget: "boolean", default: false, optional: true }
       - name: "screens"
         label: "Screens"
         label_singular: "Screen"
