@@ -19,6 +19,7 @@ tech:
   - HTML
   - CSS
   - Photoshop
+show_on_home: true
 screens:
   - screen: /img/uploads/kostinbrod.jpg
   - screen: /img/uploads/kostinbrod-screen.png
