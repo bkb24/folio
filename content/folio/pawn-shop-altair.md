@@ -21,6 +21,7 @@ tech:
   - HTML
   - CSS
   - SCSS
+show_on_home: true
 screens:
   - screen: /img/uploads/zkaltair.com_1.jpg
   - screen: /img/uploads/zkaltair.com-m.jpg
