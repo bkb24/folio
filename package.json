@@ -1,12 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "bkb24",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Personal website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "author": "Bkb24",
   "dependencies": {
     "gatsby": "^2.15.28",
     "gatsby-image": "^2.2.23",
@@ -45,7 +42,7 @@
   "devDependencies": {
     "prettier": "^1.18.2"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://bkb24.netlify.com",
   "keywords": [
     "gatsby"
   ],
@@ -61,6 +58,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "clean": "gatsby clean",
+    "dev": "gatsby clean && npm run start",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
     "svg-sprite": "npx svg-sprite-generate -d content/assets/svg-icons -o content/assets/svg-sprite.svg"

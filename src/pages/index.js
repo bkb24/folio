@@ -98,7 +98,7 @@ const Index = (props) => {
         menuHidden={menuHidden}
       >
         <Hero height={winHeight} isMobile={!menuHidden} sideNavRef={sideNavRef} />
-        <Folio projects={data.allMarkdownRemark.edges.map((item) => item.node.frontmatter)} />
+        {/* <Folio projects={data.allMarkdownRemark.edges.map((item) => item.node.frontmatter)} /> */}
         <Services />
         <Skills />
         <Contact />
@@ -106,47 +106,47 @@ const Index = (props) => {
   )
 };
 
-export const pageQuery = graphql`
-  query HomePage {
-    allMarkdownRemark(
-      filter: {
-        frontmatter: {
-          type: { eq: "project" },
-          show_on_home: { eq: true }
-        }
-      },
-      limit: 3
-    ) {
-      edges {
-        node {
-          frontmatter {
-            type
-            title
-            url
-            code
-            description
-            main_img_d
-            main_img_m
-            tech
-            screens {
-              screen
-            }
-            work {
-              work
-            }
-            partners {
-              name
-              work
-              social {
-                social_name
-                url
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query HomePage {
+//     allMarkdownRemark(
+//       filter: {
+//         frontmatter: {
+//           type: { eq: "project" },
+//           show_on_home: { eq: true }
+//         }
+//       },
+//       limit: 3
+//     ) {
+//       edges {
+//         node {
+//           frontmatter {
+//             type
+//             title
+//             url
+//             code
+//             description
+//             main_img_d
+//             main_img_m
+//             tech
+//             screens {
+//               screen
+//             }
+//             work {
+//               work
+//             }
+//             partners {
+//               name
+//               work
+//               social {
+//                 social_name
+//                 url
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default Index
