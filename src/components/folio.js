@@ -41,8 +41,8 @@ const Folio = (props) => {
                                 <h4 className="project-tech-title">Technologies used</h4>
                                 <ul className="project-tech-list">
                                     {
-                                        item.tech.map(tech => {
-                                            return <li className="project-tech-list-item">{ tech }</li>
+                                        item.tech.map((tech, j) => {
+                                            return <li key={j} className="project-tech-list-item">{ tech }</li>
                                         })
                                     }
                                 </ul>
