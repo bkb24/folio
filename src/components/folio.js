@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import icons from '../../content/assets/img/sprite.svg'
 
@@ -208,5 +207,25 @@ const Folio = () => {
 
     )
 }
+
+// query MyQuery {
+//     allMarkdownRemark(
+//       filter: {
+//           frontmatter: {
+//             type: { eq: "project" },
+//             show_on_home: { eq: true }
+//           }
+//         },
+//       limit: 3
+//     ) {
+//       edges {
+//         node {
+//           frontmatter {
+//             title
+//           }
+//         }
+//       }
+//     }
+//   }
 
 export default Folio

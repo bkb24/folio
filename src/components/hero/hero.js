@@ -20,8 +20,6 @@ const Hero = (props) => {
 
     let heightStyle = props.isMobile ? { height: props.height } : {};
 
-    console.log('props.height', props.height)
-
     return (
         <div className="hero" style={heightStyle}>
             <SideMenu ref={props.sideNavRef}>

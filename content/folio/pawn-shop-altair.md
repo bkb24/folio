@@ -13,8 +13,8 @@ description: >-
   page on the search for the term "pawn shop Varna" and it also showed up for
   "pawn shop" for searches from Varna. Not only that they were rated first or on
   first page here and there for products terms like "pawn shop TVs".
-main-img-d: /img/uploads/zkaltair.com-d.jpg
-main-img-m: /img/uploads/altair.jpg
+main_img_d: /img/uploads/zkaltair.com-d.jpg
+main_img_m: /img/uploads/altair.jpg
 tech:
   - WordPress
   - Woocommerce

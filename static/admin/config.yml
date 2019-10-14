@@ -32,8 +32,8 @@ collections:
       - { label: "URL", name: "url", widget: "string" }
       - { label: "Code URL", name: "code", widget: "string", optional: true }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Desktop shot", name: "main-img-d", widget: "image" }
-      - { label: "Mobile shot", name: "main-img-m", widget: "image" }
+      - { label: "Desktop shot", name: "main_img_d", widget: "image" }
+      - { label: "Mobile shot", name: "main_img_m", widget: "image" }
       - { label: "Technologies", name: "tech", widget: "list" }
       - { label: "Show on home", name: "show_on_home", widget: "boolean", default: false, optional: true }
       - name: "screens"

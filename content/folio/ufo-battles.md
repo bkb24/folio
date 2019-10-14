@@ -4,8 +4,8 @@ title: UFO Battles
 url: 'http://ufo-battles.herokuapp.com'
 code: ' '
 description: A real-time turn based quiz game.
-main-img-d: /img/uploads/ufo.png
-main-img-m: /img/uploads/ufo-game.png
+main_img_d: /img/uploads/ufo.png
+main_img_m: /img/uploads/ufo-game.png
 tech:
   - NodeJs
   - expressJs

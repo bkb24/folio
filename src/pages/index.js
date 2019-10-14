@@ -29,7 +29,10 @@ const Index = (props) => {
   }, []);
 
   const { data } = props;
-  const siteTitle = data.site.siteMetadata.title;
+
+  console.log('data', data)
+
+  // const siteTitle = data.site.siteMetadata.title;
 
   let mainMenuRef = useRef()
   let sideNavRef = useRef()
@@ -90,14 +93,12 @@ const Index = (props) => {
       <Layout
         cssClass="index-page"
         location={props.location}
-        title={siteTitle}
+        // title={siteTitle}
         mainMenuRef={mainMenuRef}
         menuHidden={menuHidden}
       >
         <Hero height={winHeight} isMobile={!menuHidden} sideNavRef={sideNavRef} />
-        <Folio />
-
-
+        <Folio projects={data.allMarkdownRemark} />
         <Services />
         <Skills />
         <Contact />
@@ -105,29 +106,34 @@ const Index = (props) => {
   )
 };
 
-export default Index
-
 export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+  query HomePage {
+    allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          type: { eq: "project" },
+          show_on_home: { eq: true }
+        }
+      },
+      limit: 3
+    ) {
       edges {
         node {
-          excerpt
-          fields {
-            slug
-          }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            type
             title
+            url
+            code
             description
+            tech
+            screens
+            work
+            partners
           }
         }
       }
     }
   }
 `
+
+export default Index

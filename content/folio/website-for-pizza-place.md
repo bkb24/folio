@@ -9,8 +9,8 @@ description: >-
   the Woocommerce products admin area. The url is from the test page, the
   website did not get live and is underdeveloped. The owner wanted to go a
   different direction.
-main-img-d: /img/uploads/karo.bkb24.com-d.jpg
-main-img-m: /img/uploads/karo.bkb24.com-m.jpg
+main_img_d: /img/uploads/karo.bkb24.com-d.jpg
+main_img_m: /img/uploads/karo.bkb24.com-m.jpg
 tech:
   - WordPress
   - Woocommerce
