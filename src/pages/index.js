@@ -125,6 +125,8 @@ export const pageQuery = graphql`
             url
             code
             description
+            main_img_d
+            main_img_m
             tech
             screens
             work
