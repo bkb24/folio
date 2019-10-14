@@ -30,7 +30,7 @@ const Index = (props) => {
 
   const { data } = props;
 
-  console.log('data', data)
+  // console.log('data', data.allMarkdownRemark.edges.map((item) => item.node.frontmatter));
 
   // const siteTitle = data.site.siteMetadata.title;
 
@@ -98,7 +98,7 @@ const Index = (props) => {
         menuHidden={menuHidden}
       >
         <Hero height={winHeight} isMobile={!menuHidden} sideNavRef={sideNavRef} />
-        <Folio projects={data.allMarkdownRemark} />
+        <Folio projects={data.allMarkdownRemark.edges.map((item) => item.node.frontmatter)} />
         <Services />
         <Skills />
         <Contact />
@@ -128,9 +128,20 @@ export const pageQuery = graphql`
             main_img_d
             main_img_m
             tech
-            screens
-            work
-            partners
+            screens {
+              screen
+            }
+            work {
+              work
+            }
+            partners {
+              name
+              work
+              social {
+                social_name
+                url
+              }
+            }
           }
         }
       }
