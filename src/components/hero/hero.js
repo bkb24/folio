@@ -27,6 +27,7 @@ const Hero = (props) => {
                     menuItems.map((item, i) => {
                         let Component = item.component;
                         let active = item.name === activeScreen;
+                        let data = item.name === 'Folio' ? props.projects : [];
 
                         return (
                             <li className="side-menu-item" key={i}>
@@ -36,7 +37,7 @@ const Hero = (props) => {
                                 >
                                     <span className="side-menu-item-name">{item.name}</span>
                                 </Link>
-                                <Component />
+                                <Component data={data} />
                             </li>
                         )
                     })

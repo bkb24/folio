@@ -22,14 +22,21 @@ export const pageQuery = graphql`
           type: { eq: "project" }
         }
       }
+      sort: {
+        fields: [frontmatter___order]
+        order: ASC
+      }
     ) {
       edges {
         node {
           frontmatter {
             type
             title
+            short
             url
             code
+            repo_service
+            order
             description
             main_img_d
             main_img_m

@@ -1,6 +1,12 @@
 import React from 'react'
 
-const Folio = () => {
+const Folio = (props) => {
+    const { data } = props
+    const projects = props.data.reduce((acc, item) => {
+        acc[item.short] = item;
+        return acc;
+    }, {});
+
     return (
         <div className="hero-screen hero-screen-folio">
 
@@ -10,52 +16,43 @@ const Folio = () => {
 
                     <div className="hero-project-col">
                         <div className="hero-project-item">
-                            {/* <img src="./images/projects/folio.jpg" alt=""> */}
-                            <img />
+                            <img src={projects['ufo_battles'].main_img_d} alt="UFO Battles main screen" />
                         </div>
                         <div className="hero-project-item">
-                            {/* <img src="./images/projects/folio1.png" alt=""> */}
-                            <img />
+                            <img src={projects['ufo_battles'].main_img_m} alt="UFO Battles game screen" />
                         </div>
                     </div>
 
                     <div className="hero-project-col">
                         <div className="hero-project-item">
-                            {/* <img src="./images/projects/folio2.jpg" alt=""> */}
-                            <img />
+                            <img src={projects['karo'].main_img_d} alt="Pizza place in Varna" />
                         </div>
                         <div className="hero-project-item">
-                            {/* <img src="./images/projects/folio3.jpg" alt=""> */}
-                            <img />
+                            <img src={projects['karo'].main_img_m} alt="Pizza place in Varna mobile screen" />
                         </div>
                         <div className="hero-project-item">
-                            {/* <img src="./images/projects/folio4.png" alt=""> */}
-                            <img />
+                            <img src={projects['karo'].screens[3].screen} alt="Pizza menu copy" />
                         </div>
                     </div>
 
                     <div className="hero-project-col">
                         <div className="hero-project-item">
-                            {/* <img src="./images/projects/folio5.png" alt=""> */}
-                            <img />
+                            <img src={projects['altair'].main_img_d} alt="Pawn shop Altair" />
                         </div>
                         <div className="hero-project-item">
-                            {/* <img src="./images/projects/folio6.png" alt=""> */}
-                            <img />
+                            <img src={projects['altair'].main_img_m} alt="Pawn shop Altair mobile screen" />
                         </div>
                     </div>
 
                     <div className="hero-project-col">
                         <div className="hero-project-item">
-                            {/* <img src="./images/projects/folio7.png" alt=""> */}
-                            <img />
+                            <img src={projects['kostinbrod'].main_img_m} alt="City of Kostinbrod moble screen" />
                         </div>
                         <div className="hero-project-item">
                             <img />
                         </div>
                         <div className="hero-project-item">
-                            {/* <img src="./images/projects/folio7.png" alt=""> */}
-                            <img />
+                            <img src={projects['kostinbrod'].main_img_d} alt="City of Kostinbrod" />
                         </div>
                     </div>
                 </div>

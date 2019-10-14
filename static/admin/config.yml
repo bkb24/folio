@@ -29,8 +29,11 @@ collections:
     fields:
       - { label: "Type", name: "type", widget: "string", default: "project", optional: true }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Short", name: "short", widget: "string" }
       - { label: "URL", name: "url", widget: "string" }
+      - { label: "Order", name: "order", widget: "number", valueType: "int", optional: true }
       - { label: "Code URL", name: "code", widget: "string", optional: true }
+      - { label: "Repository service", name: "repo_service", widget: "select", options: ["github", "gitlab"], default: "github", optional: true }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Desktop shot", name: "main_img_d", widget: "image" }
       - { label: "Mobile shot", name: "main_img_m", widget: "image" }

@@ -46,6 +46,11 @@
 
 .home-goto-wrap {
     text-align: center;
+    margin-top: 2rem;
+
+    @include breakpoint-up(m) {
+        margin-top: 0;
+    }
 }
 
 .home-goto-projects {
@@ -63,6 +68,7 @@
     .section-head-folio {
         @include section-head-tilted(false);
         padding: 4rem 0 3rem;
+        margin-bottom: 5rem;
 
         @include breakpoint-up(m) {
             padding: 7rem 0 4rem;

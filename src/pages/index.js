@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 // import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -29,7 +29,8 @@ const Index = (props) => {
   }, []);
 
   const { data } = props;
-  // const siteTitle = data.site.siteMetadata.title;
+  const projects = data.allMarkdownRemark.edges.map((item) => item.node.frontmatter);
+  const homeProjects = projects.filter(item => item.show_on_home);
 
   let mainMenuRef = useRef()
   let sideNavRef = useRef()
@@ -94,8 +95,12 @@ const Index = (props) => {
         mainMenuRef={mainMenuRef}
         menuHidden={menuHidden}
       >
-        <Hero height={winHeight} isMobile={!menuHidden} sideNavRef={sideNavRef} />
-        <Folio projects={data.allMarkdownRemark.edges.map((item) => item.node.frontmatter)} />
+        <Hero height={winHeight} isMobile={!menuHidden} sideNavRef={sideNavRef} projects={projects} />
+        <Folio projects={homeProjects}>
+          <div className="home-goto-wrap">
+            <Link className="home-goto-projects" to={`/folio`}>See all</Link>
+          </div>
+        </Folio>
         <Services />
         <Skills />
         <Contact />
@@ -108,19 +113,26 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       filter: {
         frontmatter: {
-          type: { eq: "project" },
-          show_on_home: { eq: true }
+          type: { eq: "project" }
         }
-      },
-      limit: 3
+      }
+      sort: {
+        fields: [frontmatter___order]
+        order: ASC
+      }
+      limit: 5
     ) {
       edges {
         node {
           frontmatter {
             type
             title
+            short
             url
             code
+            repo_service
+            order
+            show_on_home
             description
             main_img_d
             main_img_m

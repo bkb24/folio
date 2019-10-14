@@ -1,8 +1,11 @@
 ---
 type: project
 title: City of Kostinbrod
+short: 'kostinbrod'
 url: 'https://kostinbrod.netlify.com'
 code: 'https://github.com/bkb24/city-of-kostinbrod-vue'
+repo_service: 'github'
+order: 2
 description: >-
   A small web project dedicated to the Bulgarian city of Kostinbrod. I made it
   for a contest for the city's anniversary. The task was to make something about

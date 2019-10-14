@@ -1,8 +1,10 @@
 ---
 type: project
 title: Website for pizza place
+short: 'karo'
 url: 'https://karo.bkb24.com'
 code: ' '
+order: 4
 description: >-
   Wordpress, Woocommerce and Elementor Builder pizza website. I needed to make a
   custom template for the menu and category pages, also some customization in
