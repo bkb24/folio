@@ -98,6 +98,8 @@ const Contact = () => {
                     </svg>
                 </div>
 
+                <div data-netlify-recaptcha="true"></div>
+
                 <div className="contact-line">
                     <button className="hero-send">Send</button>
                 </div>

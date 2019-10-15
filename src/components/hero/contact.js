@@ -86,6 +86,8 @@ const Contact = () => {
                         <button type="submit" className="hero-send">Send</button>
                     </div>
 
+                    <div data-netlify-recaptcha="true"></div>
+
                     <div className="hero-contact-line">
                         <h5 className="heading contact-hint">All fields are required</h5>
                     </div>
