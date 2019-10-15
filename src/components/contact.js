@@ -3,6 +3,8 @@ import React from 'react'
 import icons from '../../content/assets/img/sprite.svg'
 import useForm from '../hooks/useForm'
 import validateContact from '../utils/validateContact'
+import SectionButton from './partials/section-cta-btn'
+import MessageSent from './message-sent'
 
 const Contact = () => {
     const initialData = { name: '', email: '', message: '' }
@@ -12,7 +14,8 @@ const Contact = () => {
         errors,
         onChange,
         onBlur,
-        handleSubmit
+        handleSubmit,
+        success
     } = useForm(
         initialData,
         validateContact
@@ -45,71 +48,86 @@ const Contact = () => {
                 </div>
             </div>
 
-            <form name="contact" className="contact-form" method="POST" onSubmit={handleSubmit} data-netlify="true" data-netlify-recaptcha="true">
-                <input type="hidden" name="form-name" value="contact" />
+            {   success ?
 
-                <div className="contact-line">
-                    <label htmlFor="">Name</label>
-                    <input
-                        autoComplete="off"
-                        type="text"
-                        name="name"
-                        value={data.name}
-                        onChange={onChange}
-                        onBlur={onBlur}
-                    />
-                    <div className="form-field-underline"></div>
-                    { errors.name && <p className="validation-error">{errors.name}</p> }
-                    <svg viewBox="0 0 20 20">
-                        <path d="M1 5 L10 13 L18 5" />
-                    </svg>
-                </div>
+                <MessageSent />
 
-                <div className="contact-line">
-                    <label htmlFor="">Email</label>
-                    <input
-                        autoComplete="off"
-                        type="text"
-                        name="email"
-                        value={data.email}
-                        onChange={onChange}
-                        onBlur={onBlur}
-                    />
-                    <div className="form-field-underline"></div>
-                    { errors.email && <p className="validation-error">{errors.email}</p> }
-                    <svg viewBox="0 0 20 20">
-                        <path d="M1 5 L10 13 L18 5" />
-                    </svg>
-                </div>
+                :
 
-                <div className="contact-line">
-                    <label htmlFor="">Message</label>
-                    <textarea
-                        name="message"
-                        id=""
-                        cols="30"
-                        rows="10"
-                        value={data.message}
-                        onChange={onChange}
-                        onBlur={onBlur}
-                    ></textarea>
-                    <div className="form-field-underline"></div>
-                    { errors.message && <p className="validation-error">{errors.message}</p> }
-                    <svg viewBox="0 0 20 20">
-                        <path d="M1 5 L10 13 L18 5" />
-                    </svg>
-                </div>
+                <form
+                    name="contact"
+                    className="contact-form"
+                    method="POST"
+                    onSubmit={handleSubmit}
+                    data-netlify="true"
+                    data-netlify-recaptcha="true"
+                >
+                    <input type="hidden" name="bot-field" />
+                    <input type="hidden" name="form-name" value="contact" />
 
-                <div data-netlify-recaptcha="true"></div>
+                    <div className="contact-line">
+                        <label htmlFor="">Name</label>
+                        <input
+                            autoComplete="off"
+                            type="text"
+                            name="name"
+                            value={data.name}
+                            onChange={onChange}
+                            onBlur={onBlur}
+                        />
+                        <div className="form-field-underline"></div>
+                        { errors.name && <p className="validation-error">{errors.name}</p> }
+                        <svg viewBox="0 0 20 20">
+                            <path d="M1 5 L10 13 L18 5" />
+                        </svg>
+                    </div>
 
-                <div className="contact-line">
-                    <button className="hero-send">Send</button>
-                </div>
+                    <div className="contact-line">
+                        <label htmlFor="">Email</label>
+                        <input
+                            autoComplete="off"
+                            type="text"
+                            name="email"
+                            value={data.email}
+                            onChange={onChange}
+                            onBlur={onBlur}
+                        />
+                        <div className="form-field-underline"></div>
+                        { errors.email && <p className="validation-error">{errors.email}</p> }
+                        <svg viewBox="0 0 20 20">
+                            <path d="M1 5 L10 13 L18 5" />
+                        </svg>
+                    </div>
 
-                <div className="contact-line">
-                    <h5>All fields are required</h5>
-                </div>
-            </form>
+                    <div className="contact-line">
+                        <label htmlFor="">Message</label>
+                        <textarea
+                            name="message"
+                            id=""
+                            cols="30"
+                            rows="10"
+                            value={data.message}
+                            onChange={onChange}
+                            onBlur={onBlur}
+                        ></textarea>
+                        <div className="form-field-underline"></div>
+                        { errors.message && <p className="validation-error">{errors.message}</p> }
+                        <svg viewBox="0 0 20 20">
+                            <path d="M1 5 L10 13 L18 5" />
+                        </svg>
+                    </div>
+
+                    <div data-netlify-recaptcha="true"></div>
+
+                    <div className="contact-line">
+                        <button className="hero-send">Send</button>
+                    </div>
+
+                    <div className="contact-line">
+                        <h5>All fields are required</h5>
+                    </div>
+                </form>
+            }
 
         </section>
     )

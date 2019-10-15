@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 
-const useForm = (initialData, validate, success = () => console.log('success')) => {
+const useForm = (initialData, validate, successCallback = () => console.log('success')) => {
     const [data, setData] = useState(initialData)
     const [errors, setErrors] = useState({})
     const [submitHit, setSubmitHit] = useState(false);
+    const [success, setSuccess] = useState(false);
 
     const onChange = e => {
         setData({ ...data, [e.target.name]: e.target.value })
@@ -17,10 +18,32 @@ const useForm = (initialData, validate, success = () => console.log('success')) 
 
     const handleSubmit = e => {
         e.preventDefault();
+
         setSubmitHit(true);
+
         let validated = validate(data);
         setErrors(validated);
-        if (Object.keys(validated).length === 0) { success(); e.target.submit(); };
+
+        if (Object.keys(validated).length === 0) {
+            // success();
+
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: encode({ "form-name": e.target.name, ...data })
+            })
+            .then(() =>{
+                alert("Success!");
+                setSuccess(true);
+            })
+            .catch(error => alert(error));
+        };
+    }
+
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
     }
 
     return {
@@ -28,7 +51,8 @@ const useForm = (initialData, validate, success = () => console.log('success')) 
         errors,
         onChange,
         onBlur,
-        handleSubmit
+        handleSubmit,
+        success
     }
 }
 

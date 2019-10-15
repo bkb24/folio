@@ -13,7 +13,6 @@
     .section-head-tilted-contact:before {
         display: none;
     }
-
 }
 
 .contact-section {
@@ -199,4 +198,46 @@
 
 .contact-form h5 {
     color: get-color('primary');
+}
+
+.contact-success {
+
+}
+
+.contact-success-icon {
+    @include size(7rem);
+    margin: auto;
+    margin-bottom: 1rem;
+
+    svg {
+        @include size;
+    }
+
+    @include breakpoint-up(m) {
+        @include size(10rem);
+
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.contact-success-message {
+    text-align: center;
+
+    font-size: 1.125rem;
+    font-family: 'Lato', 'sans-serif';
+    font-weight: 600;
+    color: get-color('primary');
+
+    @include breakpoint-up(m) {
+        font-size: 1.5rem;
+    }
+}
+
+.section-cta-success {
+    margin-bottom: 5rem;
+
+    @include breakpoint-up(m) {
+        margin-top: 3rem;
+    }
 }

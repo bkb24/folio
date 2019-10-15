@@ -1,6 +1,7 @@
 import React from 'react'
 import useForm from '../../hooks/useForm'
 import validateContact from '../../utils/validateContact'
+import MessageSent from '../message-sent'
 
 const Contact = () => {
     const initialData = { name: '', email: '', message: '' }
@@ -10,7 +11,8 @@ const Contact = () => {
         errors,
         onChange,
         onBlur,
-        handleSubmit
+        handleSubmit,
+        success
     } = useForm(
         initialData,
         validateContact
@@ -36,64 +38,81 @@ const Contact = () => {
             </div>
 
             <div className="hero-contact-col hero-contact-area">
-                <form name="contact" className="hero-contact-form" method="POST" onSubmit={handleSubmit} data-netlify="true" data-netlify-recaptcha="true">
-                    <input type="hidden" name="form-name" value="contact" />
+                {
+                    success ?
 
-                    <div className="hero-contact-line">
-                        <label className="hero-contact-label" htmlFor="contact-name">Name</label>
-                        <input
-                            className="hero-contact-item"
-                            id="contact-name"
-                            type="text"
-                            name="name"
-                            autoComplete="off"
-                            value={data.name}
-                            onChange={onChange}
-                            onBlur={onBlur}
-                        />
-                        { errors.name && <p className="validation-error">{errors.name}</p> }
-                    </div>
+                    <MessageSent />
 
-                    <div className="hero-contact-line">
-                        <label className="hero-contact-label" htmlFor="contact-email">Email</label>
-                        <input
-                            className="hero-contact-item"
-                            id="contact-email"
-                            type="text"
-                            name="email"
-                            autoComplete="off"
-                            value={data.email}
-                            onChange={onChange}
-                            onBlur={onBlur}
-                        />
-                        { errors.email && <p className="validation-error">{errors.email}</p> }
-                    </div>
+                    :
 
-                    <div className="hero-contact-line">
-                        <label className="hero-contact-label" htmlFor="contact-message">Message</label>
-                        <textarea
-                            className="hero-contact-item"
-                            id="contact-message"
-                            name="message"
-                            cols="30"
-                            rows="10"
-                            value={data.message}
-                            onChange={onChange}
-                            onBlur={onBlur}
-                            ></textarea>
-                        { errors.message && <p className="validation-error">{errors.message}</p> }
-                    </div>
+                    <form
+                        name="contact-hero"
+                        className="hero-contact-form"
+                        method="POST"
+                        action="/message-sent"
+                        onSubmit={handleSubmit}
+                        data-netlify="true"
+                        data-netlify-honeypot="bot-field"
+                        >
+                        <input type="hidden" name="bot-field" />
+                        <input type="hidden" name="form-name" value="contact-hero" />
 
-                    <div className="hero-contact-line">
-                        <button type="submit" className="hero-send">Send</button>
-                    </div>
+                        <div className="hero-contact-line">
+                            <label className="hero-contact-label" htmlFor="contact-name">Name</label>
+                            <input
+                                className="hero-contact-item"
+                                id="contact-name"
+                                type="text"
+                                name="name"
+                                autoComplete="off"
+                                value={data.name}
+                                onChange={onChange}
+                                onBlur={onBlur}
+                            />
+                            { errors.name && <p className="validation-error">{errors.name}</p> }
+                        </div>
 
-                    <div data-netlify-recaptcha="true"></div>
+                        <div className="hero-contact-line">
+                            <label className="hero-contact-label" htmlFor="contact-email">Email</label>
+                            <input
+                                className="hero-contact-item"
+                                id="contact-email"
+                                type="text"
+                                name="email"
+                                autoComplete="off"
+                                value={data.email}
+                                onChange={onChange}
+                                onBlur={onBlur}
+                            />
+                            { errors.email && <p className="validation-error">{errors.email}</p> }
+                        </div>
 
-                    <div className="hero-contact-line">
-                        <h5 className="heading contact-hint">All fields are required</h5>
-                    </div>
-                </form>
+                        <div className="hero-contact-line">
+                            <label className="hero-contact-label" htmlFor="contact-message">Message</label>
+                            <textarea
+                                className="hero-contact-item"
+                                id="contact-message"
+                                name="message"
+                                cols="30"
+                                rows="10"
+                                value={data.message}
+                                onChange={onChange}
+                                onBlur={onBlur}
+                                ></textarea>
+                            { errors.message && <p className="validation-error">{errors.message}</p> }
+                        </div>
+
+                        <div className="hero-contact-line">
+                            <button type="submit" className="hero-send">Send</button>
+                        </div>
+
+                        <div data-netlify-recaptcha="true"></div>
+
+                        <div className="hero-contact-line">
+                            <h5 className="heading contact-hint">All fields are required</h5>
+                        </div>
+                    </form>
+                }
             </div>
         </div>
     )
