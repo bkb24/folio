@@ -49,7 +49,6 @@ const Contact = () => {
                         name="contact-hero"
                         className="hero-contact-form"
                         method="POST"
-                        action="/message-sent"
                         onSubmit={handleSubmit}
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"

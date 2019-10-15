@@ -1,5 +1,11 @@
 import React, { useState } from 'react'
 
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+}
+
 const useForm = (initialData, validate, successCallback = () => console.log('success')) => {
     const [data, setData] = useState(initialData)
     const [errors, setErrors] = useState({})
@@ -25,25 +31,18 @@ const useForm = (initialData, validate, successCallback = () => console.log('suc
         setErrors(validated);
 
         if (Object.keys(validated).length === 0) {
-            // success();
 
             fetch("/", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: encode({ "form-name": e.target.name, ...data })
             })
-            .then(() =>{
-                alert("Success!");
+            .then(data => {
+                console.log('data', data)
                 setSuccess(true);
             })
             .catch(error => alert(error));
         };
-    }
-
-    const encode = (data) => {
-        return Object.keys(data)
-            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-            .join("&");
     }
 
     return {
