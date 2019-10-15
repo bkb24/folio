@@ -36,7 +36,7 @@ const Contact = () => {
             </div>
 
             <div className="hero-contact-col hero-contact-area">
-                <form className="hero-contact-form" method="POST" onSubmit={handleSubmit} netlify data-netlify-recaptcha="true">
+                <form className="hero-contact-form" method="POST" onSubmit={handleSubmit} data-netlify="true" data-netlify-recaptcha="true">
                     <div className="hero-contact-line">
                         <label className="hero-contact-label" htmlFor="contact-name">Name</label>
                         <input
