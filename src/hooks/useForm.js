@@ -20,7 +20,7 @@ const useForm = (initialData, validate, success = () => console.log('success')) 
         setSubmitHit(true);
         let validated = validate(data);
         setErrors(validated);
-        if (Object.keys(validated).length === 0) success();
+        if (Object.keys(validated).length === 0) { success(); e.target.submit(); };
     }
 
     return {
