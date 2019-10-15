@@ -45,7 +45,9 @@ const Contact = () => {
                 </div>
             </div>
 
-            <form className="contact-form" method="POST" onSubmit={handleSubmit} data-netlify="true" data-netlify-recaptcha="true">
+            <form name="contact" className="contact-form" method="POST" onSubmit={handleSubmit} data-netlify="true" data-netlify-recaptcha="true">
+                <input type="hidden" name="form-name" value="contact" />
+
                 <div className="contact-line">
                     <label htmlFor="">Name</label>
                     <input
