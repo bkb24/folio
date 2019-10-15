@@ -35,7 +35,7 @@ const useForm = (initialData, validate, successCallback = () => console.log('suc
             fetch("/", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: encode({ "form-name": e.target.name, ...data })
+                body: encode({ "form-name": e.target['form-name'].value, ...data })
             })
             .then(data => {
                 console.log('data', data)
