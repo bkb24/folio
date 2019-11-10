@@ -1,10 +1,11 @@
 ---
 type: project
 title: UFO Battles
-short: 'ufo_battles'
-url: 'http://ufo-battles.herokuapp.com'
-code: ' '
+short: ufo_battles
+url: ' '
 order: 1
+code: ' '
+repo_service: github
 description: A real-time turn based quiz game.
 main_img_d: /img/uploads/ufo.png
 main_img_m: /img/uploads/ufo-game.png
