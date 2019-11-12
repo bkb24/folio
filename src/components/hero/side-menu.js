@@ -5,12 +5,12 @@ import icons from  '../../../content/assets/img/sprite.svg'
 const SideMenu = React.forwardRef((props, ref) => (
     <nav className="side-nav">
         <div className="quick-menu-social">
-            <a href="">
+            <a href="https://www.linkedin.com/in/borislav-borisov-92564b170">
                 <svg>
                     <use href={`${icons}#linkedin`} />
                 </svg>
             </a>
-            <a href="">
+            <a href="https://github.com/bkb24">
                 <svg>
                     <use href={`${icons}#github`} />
                 </svg>
