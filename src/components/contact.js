@@ -35,12 +35,12 @@ const Contact = () => {
                     <br /> or find me on social
                 </h5>
                 <div className="contact-social">
-                    <a href="">
+                    <a href="https://www.linkedin.com/in/borislav-borisov-92564b170">
                         <svg>
                             <use href={`${icons}#linkedin`} />
                         </svg>
                     </a>
-                    <a href="">
+                    <a href="https://github.com/bkb24">
                         <svg>
                             <use href={`${icons}#github`} />
                         </svg>

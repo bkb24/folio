@@ -38,7 +38,6 @@ const useForm = (initialData, validate, successCallback = () => console.log('suc
                 body: encode({ "form-name": e.target['form-name'].value, ...data })
             })
             .then(data => {
-                console.log('data', data)
                 setSuccess(true);
             })
             .catch(error => alert(error));
