@@ -6,7 +6,12 @@ url: ' '
 order: 1
 code: ' '
 repo_service: github
-description: A real-time turn based quiz game.
+description: >-
+  A real-time turn based quiz game. It is still in development and the demo site
+  is closed down for now unfortunately. Here users sign up or not, find friends
+  and play question games against one another. The first game is a one on one
+  duel game. The idea is if the project grows to be used for education with its
+  gaming / entertaining value.
 main_img_d: /img/uploads/ufo.png
 main_img_m: /img/uploads/ufo-game.png
 tech:
