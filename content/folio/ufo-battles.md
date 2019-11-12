@@ -11,7 +11,7 @@ description: >-
   is closed down for now unfortunately. Here users sign up or not, find friends
   and play question games against one another. The first game is a one on one
   duel game. The idea is if the project grows to be used for education with its
-  gaming / entertaining value.
+  gaming / entertainment value.
 main_img_d: /img/uploads/ufo.png
 main_img_m: /img/uploads/ufo-game.png
 tech:
