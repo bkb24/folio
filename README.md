@@ -4,7 +4,7 @@
 
 Thats my personal website with some of my projects and services I provide as a freelance developer.
 
-Live at: https://bkb24.netlify.com
+Live at: https://bkb24.netlify.app
 
 ## Stuff made with
 
