@@ -23,7 +23,7 @@ tech:
   - Vue
   - Vuex
   - SVG
-show_on_home: true
+show_on_home: false
 screens:
   - screen: /img/uploads/ufo-battles.herokuapp.com_.png
   - screen: /img/uploads/ufo-battles.herokuapp.com_tutorial_duel_test1.png
