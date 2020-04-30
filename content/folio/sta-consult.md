@@ -1,12 +1,7 @@
 ---
 type: project
 title: STA Consult
-short: >-
-  Law business consultation service. You can send your request for consultation
-  with a lawyer and will be informed on email if they can help you and with an
-  offer. Also there are documents for sale, prepared and worked on by lawyers.
-  It works as a marketplace, the site gets a cut and the most goes to the lawyer
-  that owns the work.
+short: sta_consult
 url: ' '
 order: 5
 code: ' '
