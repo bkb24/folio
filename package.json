@@ -42,7 +42,7 @@
   "devDependencies": {
     "prettier": "^1.18.2"
   },
-  "homepage": "https://bkb24.netlify.com",
+  "homepage": "https://bkb24.netlify.app",
   "keywords": [
     "gatsby"
   ],

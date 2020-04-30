@@ -25,13 +25,13 @@ const Folio = (props) => {
 
                     <div className="hero-project-col">
                         <div className="hero-project-item">
-                            <img src={projects['karo'].main_img_d} alt="Pizza place in Varna" />
+                            <img src={projects['sta_consult'].main_img_d} alt="Law business place in Varna" />
                         </div>
                         <div className="hero-project-item">
                             <img src={projects['karo'].main_img_m} alt="Pizza place in Varna mobile screen" />
                         </div>
                         <div className="hero-project-item">
-                            <img src={projects['karo'].screens[3].screen} alt="Pizza menu copy" />
+                            <img src={projects['life_is_beautiful'].main_img_m} alt="Festival website menu copy" />
                         </div>
                     </div>
 
@@ -40,13 +40,13 @@ const Folio = (props) => {
                             <img src={projects['altair'].main_img_d} alt="Pawn shop Altair" />
                         </div>
                         <div className="hero-project-item">
-                            <img src={projects['altair'].main_img_m} alt="Pawn shop Altair mobile screen" />
+                            <img src={projects['federation'].main_img_d} alt="Pawn shop Altair mobile screen" />
                         </div>
                     </div>
 
                     <div className="hero-project-col">
                         <div className="hero-project-item">
-                            <img src={projects['kostinbrod'].main_img_m} alt="City of Kostinbrod moble screen" />
+                            <img src={projects['folio'].main_img_m} alt="Portfolio screen" />
                         </div>
                         <div className="hero-project-item">
                             <img />

@@ -120,7 +120,6 @@ export const pageQuery = graphql`
         fields: [frontmatter___order]
         order: ASC
       }
-      limit: 5
     ) {
       edges {
         node {

@@ -5,8 +5,6 @@ import Layout from "../components/layout"
 import FolioComponent from "../components/folio";
 
 const Folio = (props) => {
-    console.log('props', props)
-
     return (
         <Layout cssClass="folio-page">
             <FolioComponent projects={props.data.allMarkdownRemark.edges.map((item) => item.node.frontmatter)} />
