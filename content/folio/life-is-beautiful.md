@@ -18,7 +18,7 @@ description: >-
   as is about bringing people from different cultures together and enjoying
   life.
 main_img_d: /img/uploads/life-d.jpg
-main_img_m: /img/uploads/life-m.jpg
+main_img_m: /img/uploads/2020-04-30-13.24.24-lifeisbeautiful-festival.com-e7ee5e2dfd8d.jpg
 tech:
   - Slim 4
   - Directus
