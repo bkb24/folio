@@ -3,7 +3,7 @@ type: project
 title: UFO Battles
 short: ufo_battles
 url: ' '
-order: 1
+order: 6
 code: ' '
 repo_service: github
 description: >-
