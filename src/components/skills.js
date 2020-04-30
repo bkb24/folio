@@ -40,9 +40,8 @@ const Skills = () => {
                             <h3>PHP</h3>
                             <ul>
                                 <li>Raw PHP 5/7</li>
-                                <li>OOP, Design Patterns</li>
-                                <li>Laravel 4/5</li>
-                                <li>DDD</li>
+                                <li>OOP</li>
+                                <li>Laravel 5.x, 6.x</li>
                             </ul>
                         </div>
 
@@ -51,9 +50,8 @@ const Skills = () => {
                             <ul>
                                 <li>ES6, npm</li>
                                 <li>Express Js</li>
-                                <li>JWT API authentication</li>
-                                <li>Implementing Websockets server</li>
-                                <li>socket.io</li>
+                                <li>JWT</li>
+                                <li>Websockets</li>
                             </ul>
                         </div>
 
@@ -61,7 +59,7 @@ const Skills = () => {
                             <h3>MySQL / MariaDB</h3>
                             <ul>
                                 <li>Complex raw queries</li>
-                                <li>Databse design</li>
+                                <li>Database design</li>
                                 <li>Transactions</li>
                             </ul>
                         </div>
@@ -69,14 +67,14 @@ const Skills = () => {
                         <div className="skills-item">
                             <h3>MongoDB</h3>
                             <ul>
-                                <li>Basic operations</li>
+                                <li>Basic</li>
                             </ul>
                         </div>
 
                         <div className="skills-item">
                             <h3>Redis</h3>
                             <ul>
-                                <li>Cache hot data</li>
+                                <li>Cachin</li>
                             </ul>
                         </div>
 
@@ -119,6 +117,7 @@ const Skills = () => {
                                 <li>Responsive design</li>
                                 <li>SCSS</li>
                                 <li>Bootstrap 2/3/4</li>
+                                <li>Clarity UI</li>
                             </ul>
                         </div>
                         <div className="skills-item">

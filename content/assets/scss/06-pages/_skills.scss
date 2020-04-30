@@ -133,6 +133,7 @@
     background: #fff;
     margin-bottom: 1rem;
     border-radius: 10px;
+    box-shadow: 0 0 20px rgba(#000, .1);
 
     @include breakpoint-up(xs) {
         width: calc(50% - 1rem);

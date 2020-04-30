@@ -26,8 +26,8 @@ const Skills = () => {
                     <h3 className="skills-home-heading">Back End</h3>
 
                     <ul className="skill-items-home">
-                        <li className="skill-items-list-home"><div className="skill-main-item">PHP</div>PHP 5/7, OOP, Design Patterns, Laravel 4/5</li>
-                        <li className="skill-items-list-home"><div className="skill-main-item">Node</div>ES6, npm, express, socket.io, ws</li>
+                        <li className="skill-items-list-home"><div className="skill-main-item">PHP</div>PHP 5/7, OOP, Laravel 5.x, 6.x</li>
+                        <li className="skill-items-list-home"><div className="skill-main-item">Node</div>ES6, npm, express, websockets</li>
                         <li className="skill-items-list-home"><div className="skill-main-item">MySQL/MariaDB</div>database design, transactions, raw queries no ORM</li>
                         <li className="skill-items-list-home"><div className="skill-main-item">MongoDB</div></li>
                         <li className="skill-items-list-home"><div className="skill-main-item">Redis</div></li>
