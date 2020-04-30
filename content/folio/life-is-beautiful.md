@@ -1,12 +1,7 @@
 ---
 type: project
 title: Life is Beautiful
-short: >-
-  This is a website for an international festival for culture and sports taking
-  place in several European countries every year. The festival is for
-  participants over 40 years of age. It is not about as much for a competition
-  as is about bringing people from different cultures together and enjoying
-  life.
+short: life_is_beautiful
 url: 'https://lifeisbeautiful-festival.com/'
 order: 2
 code: ' '
