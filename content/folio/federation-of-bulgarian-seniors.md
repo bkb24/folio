@@ -1,10 +1,7 @@
 ---
 type: project
 title: Federation of Bulgarian seniors
-short: >-
-  A website for the Federation and information for city areas local
-  organizations. Different cities can create and register their own local
-  establishment for the Federation. Calendar with events to inform all 
+short: federation
 url: '  '
 order: 7
 code: ' '
