@@ -12,6 +12,6 @@ Live at: https://bkb24.netlify.app
 1.  **Netlify CMS**
 1.  **SCSS**
 1.  **SVG**
-1.  **Gravit designer for the logos and those 2D iso graphics**
+1.  **Gravit designer for the logos and those 2D isometric graphics**
 
 Deployed to Netlify
