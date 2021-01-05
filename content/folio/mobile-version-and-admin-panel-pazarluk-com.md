@@ -1,6 +1,6 @@
 ---
 type: project
-title: 'Mobile version and admin panel Pazarluk.com '
+title: Pazarluk.com - mobile version and admin panel
 short: >-
   Pazarluk is an online marketplace type website (like OLX or ebay without the
   auction part). I was hired by the team of Pazarluk.com to work on their new
