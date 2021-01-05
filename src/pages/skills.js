@@ -1,16 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-import Layout from "../components/Layout"
-import SkillsComponent from "../components/Skills"
+import Layout from '../components/Layout.js'
+import SkillsComponent from '../components/Skills.js'
 
-class Skills extends Component {
-    render() {
-        return (
-            <Layout>
-                <SkillsComponent />
-            </Layout>
-        )
-    }
+const Skills = () => {
+    return (
+        <Layout>
+            <SkillsComponent />
+        </Layout>
+    )
 }
 
 export default Skills

@@ -1,14 +1,14 @@
 import React, { useRef, useEffect, useState } from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/Layout"
+import Layout from '../components/Layout.js'
 
 import HeroContainer from '../components/hero/HeroContainer'
 import ClientsSection from '../components/ClientsSection'
-// import Folio from '../components/Folio'
-// import Services from '../components/home/Services'
-// import Skills from '../components/home/Skills'
-// import Contact from '../components/Contact'
+// import Folio from '../components/Folio.js'
+// import Services from '../components/home/Services.js'
+// import Skills from '../components/home/Skills.js'
+// import Contact from '../components/Contact.js'
 
 const Index = (props) => {
     const [menuHidden, setMenuHidden] = useState(true);
