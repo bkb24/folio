@@ -24,7 +24,7 @@ const Contact = () => {
         <section className="contact-section">
             <div className="section-head-tilted section-head-tilted-contact">
                 <div className="section-main-icon-wrap">
-                    <svg className="section-main-icon contact-section-main-icon">>
+                    <svg className="section-main-icon contact-section-main-icon">
                         <use href={`${icons}#envelope`} />
                     </svg>
                 </div>

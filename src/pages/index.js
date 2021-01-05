@@ -5,10 +5,10 @@ import Layout from "../components/Layout"
 
 import HeroContainer from '../components/hero/HeroContainer'
 import ClientsSection from '../components/ClientsSection'
-import Folio from '../components/Folio'
-import Services from '../components/home/Services'
-import Skills from '../components/home/Skills'
-import Contact from '../components/Contact'
+// import Folio from '../components/Folio'
+// import Services from '../components/home/Services'
+// import Skills from '../components/home/Skills'
+// import Contact from '../components/Contact'
 
 const Index = (props) => {
     const [menuHidden, setMenuHidden] = useState(true);
@@ -23,7 +23,7 @@ const Index = (props) => {
         return () => {
         window.removeEventListener('scroll', handleScroll);
         window.removeEventListener("resize", handleResize);
-        }
+      }
     }, []);
 
     const { data } = props;
@@ -43,22 +43,22 @@ const Index = (props) => {
         sideMenuItems.forEach((item, index) => {
             if (window.scrollY + 100 > item.offsetTop) {
                 if (!item.classList.contains('hidden')) {
-                item.classList.add('hidden');
-                moveMenu(index);
+                  item.classList.add('hidden');
+                  moveMenu(index);
                 }
             } else {
                 if (item.classList.contains('hidden')) {
-                item.classList.remove('hidden');
-                moveMenu(index - 1);
+                  item.classList.remove('hidden');
+                  moveMenu(index - 1);
                 }
             }
         });
     }
 
     const handleResize = () => {
-        setWinHeight(window.outerHeight);
-        let hide = window.matchMedia('(min-width: 1025px)').matches;
-        setMenuHidden(hide);
+      setWinHeight(window.outerHeight);
+      let hide = window.matchMedia('(min-width: 1025px)').matches;
+      setMenuHidden(hide);
     }
 
     const moveMenu = (index) => {
@@ -99,7 +99,7 @@ const Index = (props) => {
 
             <ClientsSection />
 
-            <Folio projects={homeProjects}>
+            {/* <Folio projects={homeProjects}>
                 <div className="home-goto-wrap">
                     <Link className="home-goto-projects" to={`/folio`}>
                         See all
@@ -109,7 +109,7 @@ const Index = (props) => {
 
             <Services />
             <Skills />
-            <Contact />
+            <Contact /> */}
 
         </Layout>
     )
