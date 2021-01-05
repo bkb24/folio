@@ -3,7 +3,7 @@ type: project
 title: City of Kostinbrod
 short: kostinbrod
 url: 'https://kostinbrod.netlify.app'
-order: 1
+order: 5
 code: 'https://github.com/bkb24/city-of-kostinbrod-vue'
 repo_service: github
 description: >-
