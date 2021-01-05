@@ -3,7 +3,7 @@ type: project
 title: Personal website
 short: folio
 url: 'https://bkb24.netlify.app'
-order: 4
+order: 5
 code: ' '
 repo_service: github
 description: >-
