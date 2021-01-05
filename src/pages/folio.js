@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout.js'
-import FolioComponent from '../components/Folio.js'
+import Layout from '../components/Layout'
+import FolioComponent from '../components/Folio'
 
 const Folio = (props) => {
     return (

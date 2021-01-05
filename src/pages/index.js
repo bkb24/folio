@@ -1,14 +1,14 @@
 import React, { useRef, useEffect, useState } from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from '../components/Layout.js'
+import Layout from '../components/Layout'
 
 import HeroContainer from '../components/hero/HeroContainer'
 import ClientsSection from '../components/ClientsSection'
-// import Folio from '../components/Folio.js'
-// import Services from '../components/home/Services.js'
-// import Skills from '../components/home/Skills.js'
-// import Contact from '../components/Contact.js'
+import Folio from '../components/Folio'
+import Services from '../components/home/Services'
+import Skills from '../components/home/Skills'
+import Contact from '../components/Contact'
 
 const Index = (props) => {
     const [menuHidden, setMenuHidden] = useState(true);
@@ -99,7 +99,7 @@ const Index = (props) => {
 
             <ClientsSection />
 
-            {/* <Folio projects={homeProjects}>
+            <Folio projects={homeProjects}>
                 <div className="home-goto-wrap">
                     <Link className="home-goto-projects" to={`/folio`}>
                         See all
@@ -109,7 +109,7 @@ const Index = (props) => {
 
             <Services />
             <Skills />
-            <Contact /> */}
+            <Contact />
 
         </Layout>
     )

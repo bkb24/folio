@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Layout from '../components/Layout.js'
-import SkillsComponent from '../components/Skills.js'
+import Layout from '../components/Layout'
+import SkillsComponent from '../components/Skills'
 
 const Skills = () => {
     return (
