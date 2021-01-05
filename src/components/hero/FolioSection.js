@@ -16,21 +16,23 @@ const FolioSection = (props) => {
 
                     <div className="hero-project-col">
                         <div className="hero-project-item">
-                            {/* <img src={projects['ufo_battles'].main_img_d} alt="UFO Battles main screen" /> */}
                             <img src={projects['life_is_beautiful'].main_img_d} alt="Festival website menu copy" />
                         </div>
-                        {/* <div className="hero-project-item"> */}
-                            {/* <img src={projects['ufo_battles'].main_img_m} alt="UFO Battles game screen" /> */}
-                        {/* </div> */}
+                        <div className="hero-project-item">
+                            <img src={projects['hotel_pamporovo'].main_img_m} alt="Hotel Pamporovo mobile screen" />
+                        </div>
                     </div>
 
                     <div className="hero-project-col">
-                        {/* <div className="hero-project-item"> */}
-                            {/* <img src={projects['sta_consult'].main_img_d} alt="Law business place in Varna" /> */}
-                        {/* </div> */}
-                        {/* <div className="hero-project-item"> */}
-                            {/* <img src={projects['karo'].main_img_m} alt="Pizza place in Varna mobile screen" /> */}
-                        {/* </div> */}
+                        <div className="hero-project-item">
+                            <img src={projects['hotel_pamporovo'].main_img_d} alt="Hotel Pamporovo special offers page" />
+                        </div>
+                        <div className="hero-project-item">
+                            <img
+                                src={projects['pazarluk'].main_img_m}
+                                alt="Pazarluk.com online marketplace"
+                            />
+                        </div>
                         <div className="hero-project-item">
                             <img src={projects['life_is_beautiful'].main_img_m} alt="Festival website menu copy" />
                         </div>
