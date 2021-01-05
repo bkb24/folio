@@ -1,13 +1,7 @@
 ---
 type: project
 title: Pazarluk.com - mobile version and admin panel
-short: >-
-  Pazarluk is an online marketplace type website (like OLX or ebay without the
-  auction part). I was hired by the team of Pazarluk.com to work on their new
-  mobile web application. My job included building the entire mobile front-end,
-  but also some API work and other business logic on the backend. They asked me
-  to work on the admin panel and try to improve the loading of some pages. We
-  ended up reworking almost the entire admin panel
+short: pazarluk
 url: 'https://pazarluk.com'
 order: 1
 code: '   '
