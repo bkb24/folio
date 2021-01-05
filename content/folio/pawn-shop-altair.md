@@ -1,10 +1,11 @@
 ---
 type: project
 title: Pawn shop Altair
-short: 'altair'
+short: altair
 url: 'https://zkaltair.com'
+order: 4
 code: ' '
-order: 3
+repo_service: github
 description: >-
   Pawn shop catalog website built with WordPress and Woocommerce. I made a child
   theme from Storefront theme and some widgets. The owners wanted a quick
