@@ -1,11 +1,7 @@
 ---
 type: project
 title: Hotel Pamporovo
-short: >-
-  Hotel Pamporovo is located in Rodope Mountains in Bulgaria in Pamporovo Ski
-  Resort. It is a family hotel visited by people going on a ski vacation in the
-  winter months. They needed a new website before the new winter season starts
-  and were in a hurry with the pandemic situation making it difficult
+short: hotel_pamporovo
 url: 'https://pamporovohotel.com'
 order: 2
 code: '   '
