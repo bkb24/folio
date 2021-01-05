@@ -3,7 +3,7 @@ type: project
 title: Life is Beautiful
 short: life_is_beautiful
 url: 'https://lifeisbeautiful-festival.com/'
-order: 2
+order: 3
 code: ' '
 repo_service: github
 description: >-
