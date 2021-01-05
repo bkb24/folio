@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Folio = (props) => {
+const FolioSection = (props) => {
     const { data } = props
     const projects = props.data.reduce((acc, item) => {
         acc[item.short] = item;
@@ -67,4 +67,4 @@ const Folio = (props) => {
     )
 }
 
-export default Folio
+export default FolioSection

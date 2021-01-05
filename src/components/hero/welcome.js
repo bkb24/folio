@@ -15,16 +15,16 @@ const Welcome = () => {
 
                 <ul className="hero-welcome-services">
                     <li className="hero-welcome-services-item">
-                        Making WordPress, Woocommerce sites
+                        WordPress, Woocommerce
                     </li>
                     <li className="hero-welcome-services-item">
-                        Translating your own designs from Figma, AdobeXD, Phostoshop to a fully functioning website
+                        Designs from Figma, AdobeXD, Phostoshop to a fully functioning website
                     </li>
                     <li className="hero-welcome-services-item">
-                        Building apps, APIs, web services with PHP, Laravel, NodeJs, express, Vue and React
+                        Web apps, APIs - PHP, Laravel, NodeJs, express, Vue and React
                     </li>
                     <li className="hero-welcome-services-item">
-                        Managing hosting and domains
+                        Managing web hosting
                     </li>
                 </ul>
             </div>

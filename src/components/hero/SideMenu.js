@@ -20,7 +20,7 @@ const SideMenu = React.forwardRef((props, ref) => (
             </a>
         </div>
 
-        <h5 className="side-menu-title">Quick view menu</h5>
+        {/* <h5 className="side-menu-title">Quick view menu</h5> */}
 
         <ul className="side-menu" ref={ref}>
             {props.children}

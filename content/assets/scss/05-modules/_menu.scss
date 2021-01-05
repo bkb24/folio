@@ -87,7 +87,8 @@ $main-menu-height: rem(70);
     height: 100%;
     width: rem(260);
 
-    background: linear-gradient(90deg, rgba(242, 253, 255, .98) 0%, rgba(255, 255, 255,.98) 100%);
+    background: rgba(242, 253, 255, .98);
+    // background: linear-gradient(90deg,  0%, rgba(255, 255, 255,.98) 100%);
     box-shadow: 0 0 20px rgba(#000, .15);
 
     transform: translateX(105%);
@@ -109,6 +110,8 @@ $main-menu-height: rem(70);
 
         transform: none;
 
+        transition: all .25s ease-in-out;
+
         &.hidden {
             transform: translateY(-100%);
             opacity: 0;
@@ -116,6 +119,8 @@ $main-menu-height: rem(70);
 
         &.main-nav-no-bg {
             background: transparent;
+            box-shadow: none;
+            transition: all .25s ease-in-out;
 
             .main-menu-link {
                 color: #fff;
@@ -172,6 +177,8 @@ $main-menu-height: rem(70);
     font-weight: 700;
     font-family: 'Lato', sans-serif;
     line-height: 1;
+
+    border-bottom: 2px solid transparent;
 
     @include breakpoint-up(m) {
         justify-content: center;

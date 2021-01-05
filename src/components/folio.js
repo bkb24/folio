@@ -1,11 +1,10 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import Project from './project'
+import Project from './Project'
 
 const Folio = (props) => {
     return (
         <section className="folio-section">
-             <div className="section-head-folio">
+            <div className="section-head-folio">
                 <h2 className="projects-heading">Projects</h2>
                 <h5 className="projects-subheading">
                     Here is some of my most notable work

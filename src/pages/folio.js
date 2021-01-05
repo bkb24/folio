@@ -1,13 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import FolioComponent from "../components/folio";
+import Layout from "../components/Layout"
+import FolioComponent from "../components/Folio";
 
 const Folio = (props) => {
     return (
         <Layout cssClass="folio-page">
-            <FolioComponent projects={props.data.allMarkdownRemark.edges.map((item) => item.node.frontmatter)} />
+            <FolioComponent
+                projects={
+                    props.data.allMarkdownRemark.edges
+                        .map((item) => item.node.frontmatter)
+                }
+            />
         </Layout>
     )
 }

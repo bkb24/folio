@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-import Layout from "../components/layout"
-import SkillsComponent from "../components/skills";
+import Layout from "../components/Layout"
+import SkillsComponent from "../components/Skills";
 
 class Skills extends Component {
     render() {

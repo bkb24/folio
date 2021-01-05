@@ -3,8 +3,7 @@ import React from 'react'
 import icons from '../../content/assets/img/sprite.svg'
 import useForm from '../hooks/useForm'
 import validateContact from '../utils/validateContact'
-import SectionButton from './partials/section-cta-btn'
-import MessageSent from './message-sent'
+import MessageSent from './MessageSent'
 
 const Contact = () => {
     const initialData = { name: '', email: '', message: '' }

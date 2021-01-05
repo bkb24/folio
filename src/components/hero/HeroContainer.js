@@ -1,20 +1,20 @@
 import React, { Component, useState } from 'react'
 import { Link } from "gatsby"
 
-import SideMenu from './side-menu'
-import Welcome from './welcome'
-import Folio from './folio'
-import Services from './services'
-import Skills from './skills'
-import Contact from './contact'
+import SideMenu from './SideMenu'
+import Welcome from './Welcome'
+import FolioSection from './FolioSection'
+import ServicesSection from './ServicesSection'
+import SkillsSection from './SkillsSection'
+import ContactSection from './ContactSection'
 
-const Hero = (props) => {
+const HeroContainer = (props) => {
     let [menuItems, ] = useState([
-        { name: 'Welcome',  component: Welcome,     to: '/' },
-        { name: 'Folio',    component: Folio,       to: '/folio' },
-        { name: 'Services', component: Services,    to: '/services' },
-        { name: 'Skills',   component: Skills,      to: '/skills' },
-        { name: 'Contact',  component: Contact,     to: '/contact' }
+        { name: 'Welcome',  component: Welcome,         to: '/' },
+        { name: 'Folio',    component: FolioSection,    to: '/folio' },
+        { name: 'Services', component: ServicesSection, to: '/services' },
+        { name: 'Skills',   component: SkillsSection,   to: '/skills' },
+        { name: 'Contact',  component: ContactSection,  to: '/contact' }
     ]);
     let [activeScreen, setActiveScreen] = useState('Welcome');
 
@@ -48,4 +48,4 @@ const Hero = (props) => {
     )
 }
 
-export default Hero
+export default HeroContainer

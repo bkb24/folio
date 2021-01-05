@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "gatsby"
 
-// import { rhythm, scale } from "../utils/typography"
-import MainNav from "./main-nav"
+import MainNav from "./MainNav"
 
 import '../../content/assets/scss/main.scss'
 

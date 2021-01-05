@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Skills = () => {
+const SkillsSection = () => {
     return (
         <div className="hero-screen hero-screen-skills">
             {/* <div className="hero-skills-logos"></div> */}
@@ -40,4 +40,4 @@ const Skills = () => {
     )
 }
 
-export default Skills
+export default SkillsSection

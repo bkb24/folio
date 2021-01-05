@@ -2,7 +2,7 @@ import React from 'react'
 
 import icons from '../../../content/assets/img/sprite.svg'
 
-const Services = () => {
+const ServicesSection = () => {
     return (
         <div className="hero-screen hero-screen-services">
             <div className="hero-services-logo">
@@ -25,4 +25,4 @@ const Services = () => {
     )
 }
 
-export default Services
+export default ServicesSection

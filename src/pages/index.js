@@ -1,111 +1,118 @@
 import React, { useRef, useEffect, useState } from "react"
 import { Link, graphql } from "gatsby"
 
-// import Bio from "../components/bio"
-import Layout from "../components/layout"
-// import SEO from "../components/seo"
-// import { rhythm } from "../utils/typography"
+import Layout from "../components/Layout"
 
-import Hero from "../components/hero/hero"
-import Folio from '../components/folio'
-import Services from '../components/home/services'
-import Skills from '../components/home/skills'
-import Contact from '../components/contact'
+import HeroContainer from '../components/hero/HeroContainer'
+import ClientsSection from '../components/ClientsSection'
+import Folio from '../components/Folio'
+import Services from '../components/home/Services'
+import Skills from '../components/home/Skills'
+import Contact from '../components/Contact'
 
 const Index = (props) => {
-  const [menuHidden, setMenuHidden] = useState(true);
-  const [winHeight, setWinHeight] = useState(null);
+    const [menuHidden, setMenuHidden] = useState(true);
+    const [winHeight, setWinHeight] = useState(null);
 
-  useEffect(() => {
-    toggleMainNav();
-    setWinHeight(window.outerHeight);
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener("resize", handleResize);
+    useEffect(() => {
+        toggleMainNav();
+        setWinHeight(window.outerHeight);
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener("resize", handleResize);
-    }
-  }, []);
-
-  const { data } = props;
-  const projects = data.allMarkdownRemark.edges.map((item) => item.node.frontmatter);
-  const homeProjects = projects.filter(item => item.show_on_home);
-
-  let mainMenuRef = useRef()
-  let sideNavRef = useRef()
-
-  const handleScroll = () => {
-    if (!window.matchMedia('(min-width: 1025px)').matches) return;
-
-    let sideMenuItems = Array.from(sideNavRef.current.children);
-
-    toggleMainNav();
-
-    sideMenuItems.forEach((item, index) => {
-        if (window.scrollY + 100 > item.offsetTop) {
-            if (!item.classList.contains('hidden')) {
-              item.classList.add('hidden');
-              moveMenu(index);
-            }
-        } else {
-            if (item.classList.contains('hidden')) {
-              item.classList.remove('hidden');
-              moveMenu(index - 1);
-            }
+        return () => {
+        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener("resize", handleResize);
         }
-    });
-  }
+    }, []);
 
-  const handleResize = () => {
-    setWinHeight(window.outerHeight);
+    const { data } = props;
+    const projects = data.allMarkdownRemark.edges.map((item) => item.node.frontmatter);
+    const homeProjects = projects.filter(item => item.show_on_home);
 
-    if (window.matchMedia('(min-width: 1025px)').matches) {
-      setMenuHidden(true)
-    } else {
-      setMenuHidden(false)
+    let mainMenuRef = useRef()
+    let sideNavRef = useRef()
+
+    const handleScroll = () => {
+        if (!window.matchMedia('(min-width: 1025px)').matches) return;
+
+        let sideMenuItems = Array.from(sideNavRef.current.children);
+
+        toggleMainNav();
+
+        sideMenuItems.forEach((item, index) => {
+            if (window.scrollY + 100 > item.offsetTop) {
+                if (!item.classList.contains('hidden')) {
+                item.classList.add('hidden');
+                moveMenu(index);
+                }
+            } else {
+                if (item.classList.contains('hidden')) {
+                item.classList.remove('hidden');
+                moveMenu(index - 1);
+                }
+            }
+        });
     }
-  }
 
-  const moveMenu = (index) => {
-    let len = 0;
-    let arr = Array.from(mainMenuRef.current.children);
+    const handleResize = () => {
+        setWinHeight(window.outerHeight);
+        let hide = window.matchMedia('(min-width: 1025px)').matches;
+        setMenuHidden(hide);
+    }
 
-    arr.forEach((item, i) => {
-      if (i > index) return;
-      len += item.offsetWidth;
-    });
-    mainMenuRef.current.style.transform =
-      `translateX(${mainMenuRef.current.offsetWidth - len}px)`;
-  }
+    const moveMenu = (index) => {
+        let len = 0;
+        let arr = Array.from(mainMenuRef.current.children);
 
-  const toggleMainNav = () => {
-    if (!window.matchMedia('(min-width: 1025px)').matches) return setMenuHidden(false);
+        arr.forEach((item, i) => {
+            if (i > index) return;
+            len += item.offsetWidth;
+        });
+        mainMenuRef.current.style.transform =
+            `translateX(${mainMenuRef.current.offsetWidth - len}px)`;
+    }
 
-    window.scrollY + 100 > sideNavRef.current.offsetTop ?
-      mainMenuRef.current.parentElement.classList.remove('hidden') :
-      mainMenuRef.current.parentElement.classList.add('hidden');
-  }
+    const toggleMainNav = () => {
+        if (!window.matchMedia('(min-width: 1025px)').matches) return setMenuHidden(false);
 
-  return (
-      <Layout
-        cssClass="index-page"
-        location={props.location}
-        // title={siteTitle}
-        mainMenuRef={mainMenuRef}
-        menuHidden={menuHidden}
-      >
-        <Hero height={winHeight} isMobile={!menuHidden} sideNavRef={sideNavRef} projects={projects} />
-        <Folio projects={homeProjects}>
-          <div className="home-goto-wrap">
-            <Link className="home-goto-projects" to={`/folio`}>See all</Link>
-          </div>
-        </Folio>
-        <Services />
-        <Skills />
-        <Contact />
-      </Layout>
-  )
+        window.scrollY + 100 > sideNavRef.current.offsetTop ?
+        mainMenuRef.current.parentElement.classList.remove('hidden') :
+        mainMenuRef.current.parentElement.classList.add('hidden');
+    }
+
+    return (
+        <Layout
+            cssClass="index-page"
+            location={props.location}
+            // title={siteTitle}
+            mainMenuRef={mainMenuRef}
+            menuHidden={menuHidden}
+        >
+
+            <HeroContainer
+                height={winHeight}
+                isMobile={!menuHidden}
+                sideNavRef={sideNavRef}
+                projects={projects}
+            />
+
+            <ClientsSection />
+
+            <Folio projects={homeProjects}>
+                <div className="home-goto-wrap">
+                    <Link className="home-goto-projects" to={`/folio`}>
+                        See all
+                    </Link>
+                </div>
+            </Folio>
+
+            <Services />
+            <Skills />
+            <Contact />
+
+        </Layout>
+    )
 };
 
 export const pageQuery = graphql`

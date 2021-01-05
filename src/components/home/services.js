@@ -13,13 +13,18 @@ const Services = () => {
                 </svg>
 
                 <h3 className="section-heading">Services</h3>
-                <h5 className="section-subheading">Creating, managing and extending websites and applications</h5>
+                <h5 className="section-subheading">
+                    Creating, managing and extending websites and applications
+                </h5>
             </div>
 
             <div className="services-separator services-home-separator">
                 <div className="subhero">
                     <h2>&lt;?&gt;</h2>
-                    <p>As a full stack web developer with more than 5 years experience in web design and web technologies</p>
+                    <p>
+                        As a full stack web developer with more than 5 years
+                        experience in web design and web technologies
+                    </p>
                     <p className="what-can-i-do">what can I do for you?</p>
                     <h2>&lt;/?&gt;</h2>
                 </div>
@@ -30,28 +35,52 @@ const Services = () => {
 
                 <ul className="services-home-list">
                     <li className="services-list-item">
-                        <div className="services-item-title">Creating a new website</div>
-                        <div className="services-item-subtitle">Get a new custom coded or WordPress website for you</div>
+                        <div className="services-item-title">
+                            Creating a new website
+                        </div>
+                        <div className="services-item-subtitle">
+                            Get a new custom coded or WordPress website for you
+                        </div>
                     </li>
                     <li className="services-list-item">
-                        <div className="services-item-title">Making an online store</div>
-                        <div className="services-item-subtitle">Woocommerce or a custom store for your business</div>
+                        <div className="services-item-title">
+                            Making an online store
+                        </div>
+                        <div className="services-item-subtitle">
+                            Woocommerce or a custom store for your business
+                        </div>
                     </li>
                     <li className="services-list-item">
-                        <div className="services-item-title">Application, API development</div>
-                        <div className="services-item-subtitle">Development of a full application or a module or an API</div>
+                        <div className="services-item-title">
+                            Application, API development
+                        </div>
+                        <div className="services-item-subtitle">
+                            Development of a full application or a module or an API
+                        </div>
                     </li>
                     <li className="services-list-item">
-                        <div className="services-item-title">Web design</div>
-                        <div className="services-item-subtitle">Get a clean design like this one from me or from a professional designer</div>
+                        <div className="services-item-title">
+                            Web design
+                        </div>
+                        <div className="services-item-subtitle">
+                            Get a clean design like this one from me or from a professional designer
+                        </div>
                     </li>
                     <li className="services-list-item">
-                        <div className="services-item-title">Website hosting, management</div>
-                        <div className="services-item-subtitle">Don't deal with any hostings and management, leave that to me</div>
+                        <div className="services-item-title">
+                            Website hosting, management
+                        </div>
+                        <div className="services-item-subtitle">
+                            Don't deal with any hostings and management, leave that to me
+                        </div>
                     </li>
                     <li className="services-list-item">
-                        <div className="services-item-title">On-page, local SEO</div>
-                        <div className="services-item-subtitle">Get a basic on-page SEO</div>
+                        <div className="services-item-title">
+                            On-page, local SEO
+                        </div>
+                        <div className="services-item-subtitle">
+                            Get a basic on-page SEO
+                        </div>
                     </li>
                 </ul>
 

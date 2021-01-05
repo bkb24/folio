@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-import Layout from "../components/layout"
-import ServicesComponent from "../components/services";
+import Layout from "../components/Layout"
+import ServicesComponent from "../components/Services";
 
 class Services extends Component {
     render() {

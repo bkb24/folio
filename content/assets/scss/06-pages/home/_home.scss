@@ -22,3 +22,51 @@
         }
     }
 }
+
+.section-head-clients {
+    margin-top: 2rem;
+
+    @include breakpoint-up(m) {
+        margin-top: 4rem;
+    }
+}
+
+// Clients section
+.clients-section {
+    @include breakpoint-up(xs) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.client-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 13rem;
+    max-width: 20rem;
+    max-height: 10rem;
+    margin: auto;
+    margin-bottom: 1rem;
+
+    filter: grayscale(.85);
+    opacity: .55;
+
+    img {
+        height: 100%;
+        display: block;
+    }
+
+    @include breakpoint-up(xs) {
+        margin: 2rem;
+        transition: all .5s ease-in-out;
+
+        &:hover {
+            filter: grayscale(.1);
+            opacity: 1;
+            transition: all .5s ease-in-out;
+        }
+    }
+}

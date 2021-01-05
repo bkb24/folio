@@ -1,9 +1,9 @@
 import React from 'react'
 import useForm from '../../hooks/useForm'
 import validateContact from '../../utils/validateContact'
-import MessageSent from '../message-sent'
+import MessageSent from '../MessageSent'
 
-const Contact = () => {
+const ContactSection = () => {
     const initialData = { name: '', email: '', message: '' }
 
     const {
@@ -117,4 +117,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default ContactSection

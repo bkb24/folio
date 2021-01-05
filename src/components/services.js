@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react'
-import { Link } from 'gatsby'
 
 import SectionButton from './partials/section-cta-btn'
 import icons from '../../content/assets/img/sprite.svg'
