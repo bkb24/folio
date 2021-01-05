@@ -16,20 +16,21 @@ const FolioSection = (props) => {
 
                     <div className="hero-project-col">
                         <div className="hero-project-item">
-                            <img src={projects['ufo_battles'].main_img_d} alt="UFO Battles main screen" />
+                            {/* <img src={projects['ufo_battles'].main_img_d} alt="UFO Battles main screen" /> */}
+                            <img src={projects['life_is_beautiful'].main_img_d} alt="Festival website menu copy" />
                         </div>
-                        <div className="hero-project-item">
-                            <img src={projects['ufo_battles'].main_img_m} alt="UFO Battles game screen" />
-                        </div>
+                        {/* <div className="hero-project-item"> */}
+                            {/* <img src={projects['ufo_battles'].main_img_m} alt="UFO Battles game screen" /> */}
+                        {/* </div> */}
                     </div>
 
                     <div className="hero-project-col">
-                        <div className="hero-project-item">
-                            <img src={projects['sta_consult'].main_img_d} alt="Law business place in Varna" />
-                        </div>
-                        <div className="hero-project-item">
-                            <img src={projects['karo'].main_img_m} alt="Pizza place in Varna mobile screen" />
-                        </div>
+                        {/* <div className="hero-project-item"> */}
+                            {/* <img src={projects['sta_consult'].main_img_d} alt="Law business place in Varna" /> */}
+                        {/* </div> */}
+                        {/* <div className="hero-project-item"> */}
+                            {/* <img src={projects['karo'].main_img_m} alt="Pizza place in Varna mobile screen" /> */}
+                        {/* </div> */}
                         <div className="hero-project-item">
                             <img src={projects['life_is_beautiful'].main_img_m} alt="Festival website menu copy" />
                         </div>
@@ -39,9 +40,9 @@ const FolioSection = (props) => {
                         <div className="hero-project-item">
                             <img src={projects['altair'].main_img_d} alt="Pawn shop Altair" />
                         </div>
-                        <div className="hero-project-item">
-                            <img src={projects['federation'].main_img_d} alt="Pawn shop Altair mobile screen" />
-                        </div>
+                        {/* <div className="hero-project-item"> */}
+                            {/* <img src={projects['federation'].main_img_d} alt="Pawn shop Altair mobile screen" /> */}
+                        {/* </div> */}
                     </div>
 
                     <div className="hero-project-col">

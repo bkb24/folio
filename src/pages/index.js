@@ -149,14 +149,6 @@ export const pageQuery = graphql`
             work {
               work
             }
-            partners {
-              name
-              work
-              social {
-                social_name
-                url
-              }
-            }
           }
         }
       }
