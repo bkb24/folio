@@ -14,7 +14,8 @@ description: >-
 main_img_d: /img/uploads/2021-01-05-21.16.42-pamporovohotel.com-af73e96233b3.png
 main_img_m: /img/uploads/pamporovo-m.jpg
 tech:
-  - Wordpress. PHP
+  - Wordpress
+  - PHP
 show_on_home: true
 ---
 
