@@ -3,7 +3,7 @@ type: project
 title: HeliFlite.com
 short: heliflite
 url: ' '
-order: 1
+order: 2
 code: '   '
 repo_service: github
 description: >-
