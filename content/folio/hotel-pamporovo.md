@@ -16,6 +16,6 @@ main_img_m: /img/uploads/pamporovo-m.jpg
 tech:
   - Wordpress
   - PHP
-show_on_home: true
+show_on_home: false
 ---
 
