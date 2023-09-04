@@ -28,7 +28,7 @@ const Index = (props) => {
 
     const { data } = props;
     const projects = data.allMarkdownRemark.edges.map((item) => item.node.frontmatter);
-    const homeProjects = projects.filter(item => item.show_on_home);
+    const homeProjects = projects.filter(item => item.show_on_home && !item.is_hidden);
 
     let mainMenuRef = useRef()
     let sideNavRef = useRef()
