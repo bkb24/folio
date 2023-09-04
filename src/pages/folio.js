@@ -51,6 +51,7 @@ export const pageQuery = graphql`
             work {
               work
             }
+            is_hidden
           }
         }
       }
