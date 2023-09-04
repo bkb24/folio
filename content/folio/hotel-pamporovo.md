@@ -17,5 +17,6 @@ tech:
   - Wordpress
   - PHP
 show_on_home: false
+is_hidden: true
 ---
 
