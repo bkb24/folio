@@ -5,13 +5,14 @@ import Layout from '../components/Layout'
 import FolioComponent from '../components/Folio'
 
 const Folio = (props) => {
+    const projects = props.data.allMarkdownRemark.edges
+        .map((item) => item.node.frontmatter);
+    const activeProjects = projects.filter(item => !item.is_hidden);
+    
     return (
         <Layout cssClass="folio-page">
             <FolioComponent
-                projects={
-                    props.data.allMarkdownRemark.edges
-                        .map((item) => item.node.frontmatter)
-                }
+                projects={activeProjects}
             />
         </Layout>
     )
