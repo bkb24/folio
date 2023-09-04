@@ -39,6 +39,7 @@ collections:
       - { label: "Mobile shot", name: "main_img_m", widget: "image" }
       - { label: "Technologies", name: "tech", widget: "list" }
       - { label: "Show on home", name: "show_on_home", widget: "boolean", default: false, optional: true }
+      - { label: "Hidden", name: "is_hidden", widget: "boolean", default: false, optional: true }
       - name: "screens"
         label: "Screens"
         label_singular: "Screen"
