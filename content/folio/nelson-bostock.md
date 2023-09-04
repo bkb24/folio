@@ -3,7 +3,7 @@ type: project
 title: Nelson Bostock
 short: nelson_bostock
 url: 'https://www.nelsonbostock.com/'
-order: 3
+order: 2
 code: '  '
 repo_service: github
 description: >-
