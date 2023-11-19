@@ -50,7 +50,7 @@ const MainNav = React.forwardRef((props, ref) => (
                 </li>
             </ul>
             <div className="main-nav-social">
-                <a className="main-nav-social-link" href="https://www.linkedin.com/in/borislav-borisov-92564b170">
+                <a className="main-nav-social-link" href="linkedin.com/in/b-borisov-92564b170">
                     <svg>
                         <use href={`${icons}#linkedin`} />
                     </svg>
