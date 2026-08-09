@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Bkb24",
   "dependencies": {
-    "gatsby": "^2.29.3",
+    "gatsby": "^5.16.1",
     "gatsby-image": "^2.2.23",
     "gatsby-plugin-feed": "^2.3.15",
     "gatsby-plugin-google-analytics": "^2.1.19",
